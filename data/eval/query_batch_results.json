@@ -1,0 +1,1619 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-06T08:16:02.330248+00:00",
+  "config": {
+    "dataset": "data\\eval\\golden_questions.yml",
+    "base_url": "http://127.0.0.1:8000",
+    "endpoint": "/api/v1/query",
+    "top_k": 5,
+    "strategy": "hybrid",
+    "reranker_enabled": true,
+    "questions_per_iteration": 20,
+    "repeat": 1,
+    "warmup_requests": 1,
+    "timeout_seconds": 300.0
+  },
+  "summary": {
+    "planned_requests": 20,
+    "completed_requests": 20,
+    "successful_requests": 20,
+    "failed_requests": 0,
+    "interrupted": false,
+    "answers": 19,
+    "no_answers": 1,
+    "answer_rate": 0.95,
+    "no_answer_rate": 0.05,
+    "answers_with_sources_rate": 1.0,
+    "fallback_count": 0,
+    "reranker_applied_count": 20,
+    "answerability_accuracy": null,
+    "average_latency_ms": 63449,
+    "p50_latency_ms": 70677,
+    "p95_latency_ms": 83437,
+    "providers": {
+      "ollama": 19,
+      "retrieval_guard": 1
+    },
+    "wall_time_seconds": 1495.46
+  },
+  "results": [
+    {
+      "sequence": 1,
+      "iteration": 1,
+      "question_id": "q001",
+      "question": "Что должен проверить аналитик при подозрении на phishing-письмо?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 39734,
+      "api_latency_ms": 39713,
+      "is_answerable": true,
+      "confidence": 0.7434923766666667,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        3,
+        5
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1202.0530000008876,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "При подозрении на phishing-письмо аналитик должен проверить:\n- Совпадение отображаемого имени отправителя с реальным email-адресом [1]\n- Подмену домена или typosquatting [1]\n- Соответствие домена отправителя легитимному [1]\n- Несоответствие между полями From, Reply-To и Return-Path [1]\n- Проходы проверок SPF, DKIM и DMARC [1]\n- Ссылки: видимый текст ссылки, фактический адрес, сокращатели, сходство с легитимными доменами [3]\n- Вложения: тип файла, расширение, исполняемые файлы, макросы [5]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 30,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.70679176,
+          "reranker_score": 8.154946327209473
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 34,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.75005007,
+          "reranker_score": 4.364234447479248
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 31,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7736353,
+          "reranker_score": 2.8210761547088623
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 27,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7364063,
+          "reranker_score": 2.6790740489959717
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 32,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.6792977,
+          "reranker_score": 1.3644797801971436
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 2,
+      "iteration": 1,
+      "question_id": "q002",
+      "question": "Какие признаки высокого риска есть у phishing-инцидента?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 77028,
+      "api_latency_ms": 77006,
+      "is_answerable": true,
+      "confidence": 0.6619182533333333,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1204.7686000005342,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Признаки высокого риска для phishing-инцидента согласно источнику [1]:\n- Пользователь ввёл пароль на подозрительном сайте\n- Пользователь запустил вложение\n- Письмо содержит вредоносный файл\n- Ссылка ведёт на фишинговую страницу входа\n- Письмо отправлено многим сотрудникам\n- Письмо имитирует внутренний сервис организации\n- Обнаружены признаки компрометации учётной записи",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 33,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7504152,
+          "reranker_score": 9.754264831542969
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 30,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.56633276,
+          "reranker_score": -1.5507500171661377
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 36,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.6690068,
+          "reranker_score": -2.9048779010772705
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 39,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.4970167,
+          "reranker_score": -3.2977707386016846
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 32,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.6055877,
+          "reranker_score": -3.625086784362793
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 3,
+      "iteration": 1,
+      "question_id": "q003",
+      "question": "Что нужно сделать с подозрительными ссылками в письме?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 84704,
+      "api_latency_ms": 84668,
+      "is_answerable": true,
+      "confidence": 0.5233200666666666,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1419.1652000008617,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Проверьте подозрительные ссылки в письме следующим образом: извлеките все URL, проверьте видимый текст ссылки и фактический адрес, обратите внимание на сокращатели ссылок, проверьте домены на сходство с легитимными и убедитесь, что ссылки не ведут на страницы ввода пароля или формы авторизации. Не открывайте ссылки напрямую с рабочей машины. Подозрительными считаются ссылки, ведущие на неизвестные домены или недавно зарегистрированные домены.\n\nИсточники: [1]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 31,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.5026955,
+          "reranker_score": 2.298264265060425
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 516,
+          "document_id": 51,
+          "title": "T1566.002 — Spearphishing Link",
+          "source_type": "mitre_attack",
+          "external_id": "T1566.002",
+          "score": 0.5433089,
+          "reranker_score": 2.1699888706207275
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 517,
+          "document_id": 51,
+          "title": "T1566.002 — Spearphishing Link",
+          "source_type": "mitre_attack",
+          "external_id": "T1566.002",
+          "score": 0.5239558,
+          "reranker_score": 1.4148354530334473
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 520,
+          "document_id": 51,
+          "title": "T1566.002 — Spearphishing Link",
+          "source_type": "mitre_attack",
+          "external_id": "T1566.002",
+          "score": 0.5314599,
+          "reranker_score": -0.24153713881969452
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 508,
+          "document_id": 50,
+          "title": "T1566.001 — Spearphishing Attachment",
+          "source_type": "mitre_attack",
+          "external_id": "T1566.001",
+          "score": 0.5343586,
+          "reranker_score": -0.3395443260669708
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 4,
+      "iteration": 1,
+      "question_id": "q004",
+      "question": "Какие вложения в письме считаются особенно опасными?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 1778,
+      "api_latency_ms": 1760,
+      "is_answerable": false,
+      "confidence": 0.0,
+      "sources_count": 5,
+      "cited_source_ids": [],
+      "provider": "retrieval_guard",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1648.543500006781,
+      "fallback_used": false,
+      "rejection_reason": "low_retrieval_score",
+      "answer": "В найденных источниках недостаточно информации, чтобы надёжно ответить на этот вопрос.",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 32,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.35808685,
+          "reranker_score": 5.701284885406494
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 416,
+          "document_id": 41,
+          "title": "T1204.002 — Malicious File",
+          "source_type": "mitre_attack",
+          "external_id": "T1204.002",
+          "score": 0.4239282,
+          "reranker_score": -2.650313377380371
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 33,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.4456283,
+          "reranker_score": -2.9470951557159424
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 640,
+          "document_id": 11,
+          "title": "A06:2025 Insecure Design ![icon](../assets/TOP_10_Icons_Final_Insecure_Design.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "external_id": "A06:2025",
+          "score": 0.41784903,
+          "reranker_score": -5.067197322845459
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 605,
+          "document_id": 10,
+          "title": "A05:2025 Injection ![icon](../assets/TOP_10_Icons_Final_Injection.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "external_id": "A05:2025",
+          "score": 0.4151475,
+          "reranker_score": -5.088145732879639
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 5,
+      "iteration": 1,
+      "question_id": "q005",
+      "question": "Какие статусы классификации могут быть у phishing-инцидента?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 54630,
+      "api_latency_ms": 54594,
+      "is_answerable": true,
+      "confidence": 0.7167059,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1188.5212999986834,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Возможные статусы классификации phishing-инцидента: false positive, suspicious email, confirmed phishing, credential phishing, malware delivery, business email compromise.\n\nИсточники: [1]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 36,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.753631,
+          "reranker_score": 10.194146156311035
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 33,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7220803,
+          "reranker_score": -0.37757784128189087
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 35,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.6744064,
+          "reranker_score": -2.0560343265533447
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 28,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.59945047,
+          "reranker_score": -3.4436938762664795
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 32,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.60118145,
+          "reranker_score": -3.523395299911499
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 6,
+      "iteration": 1,
+      "question_id": "q006",
+      "question": "Какие параметры PowerShell считаются подозрительными?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 57760,
+      "api_latency_ms": 57743,
+      "is_answerable": true,
+      "confidence": 0.7450467466666666,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1146.8890000032843,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Подозрительные параметры PowerShell включают: `-EncodedCommand`, `-ExecutionPolicy Bypass`, `-NoProfile`, `-WindowStyle Hidden`, `-NonInteractive`, `IEX`, `Invoke-Expression`, `DownloadString`, `DownloadFile`, `FromBase64String` [1].",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 51,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.730408,
+          "reranker_score": 10.517992973327637
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 49,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7464969,
+          "reranker_score": 4.0080695152282715
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 58,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.75823534,
+          "reranker_score": 3.9593143463134766
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 55,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.8027099,
+          "reranker_score": 3.453099012374878
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 53,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.74732226,
+          "reranker_score": 1.9805599451065063
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 7,
+      "iteration": 1,
+      "question_id": "q007",
+      "question": "Почему запуск PowerShell из Word может быть опасным?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 70677,
+      "api_latency_ms": 70642,
+      "is_answerable": true,
+      "confidence": 0.6566044166666667,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        4
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1072.7067999978317,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Запуск PowerShell из Word может быть опасным, потому что это указывает на вредоносный документ с макросом, который может быть использован злоумышленниками для загрузки вредоносного кода, обхода защитных механизмов и выполнения команд в системе. Высокий риск при запуске PowerShell от родительских процессов, таких как winword.exe, что часто связано с phishing-посылками или вредоносными макросами.\n\nИсточники: [1], [4]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 52,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.6743592,
+          "reranker_score": 2.6389636993408203
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 54,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.65058935,
+          "reranker_score": -3.8114216327667236
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 48,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.6448647,
+          "reranker_score": -4.430974006652832
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 49,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.66105986,
+          "reranker_score": -4.531518459320068
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 347,
+          "document_id": 33,
+          "title": "T1059.001 — PowerShell",
+          "source_type": "mitre_attack",
+          "external_id": "T1059.001",
+          "score": 0.6487328,
+          "reranker_score": -5.008347034454346
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 8,
+      "iteration": 1,
+      "question_id": "q008",
+      "question": "Что нужно проверить при сетевой активности PowerShell?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 71191,
+      "api_latency_ms": 71155,
+      "is_answerable": true,
+      "confidence": 0.7712699666666666,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        4
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1036.2599000000046,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "При сетевой активности PowerShell нужно проверить:\n- Внешние соединения и IP-адреса/домены, на которые обращался;\n- Использование HTTP/HTTPS запросов;\n- Скачанные исполняемые файлы или скрипты;\n- Домены с плохой репутацией и недавно зарегистрированными доменами;\n- Родительский процесс запуска PowerShell (высокий риск при использовании приложений вроде Word, Excel, Chrome и др.).\n\nИсточники: [1], [4]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 53,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.8306372,
+          "reranker_score": 10.692986488342285
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 56,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7382874,
+          "reranker_score": 5.716359615325928
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 50,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7448853,
+          "reranker_score": 4.544375419616699
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 52,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.692206,
+          "reranker_score": 4.14785623550415
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 57,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.68495715,
+          "reranker_score": 2.537492036819458
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 9,
+      "iteration": 1,
+      "question_id": "q009",
+      "question": "Что делать, если команда PowerShell закодирована в Base64?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 68038,
+      "api_latency_ms": 68002,
+      "is_answerable": true,
+      "confidence": 0.70396,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        2,
+        5
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1157.2549999982584,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Если команда PowerShell закодирована в Base64, её нужно декодировать в изолированной среде (источник [1]). Проверьте наличие параметров `-EncodedCommand`, `-ExecutionPolicy Bypass` и других признаков высокого риска (источник [2]). Сохраните декодированную команду и логируйте её в инциденте для дальнейшего анализа (источник [5]).",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 54,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7558739,
+          "reranker_score": 10.676774024963379
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 51,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.6643845,
+          "reranker_score": 1.8771475553512573
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 348,
+          "document_id": 33,
+          "title": "T1059.001 — PowerShell",
+          "source_type": "mitre_attack",
+          "external_id": "T1059.001",
+          "score": 0.6916216,
+          "reranker_score": -1.4271156787872314
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 49,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.57402104,
+          "reranker_score": -1.8847017288208008
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 57,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.62127745,
+          "reranker_score": -1.9399983882904053
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 10,
+      "iteration": 1,
+      "question_id": "q010",
+      "question": "Какие сценарии атаки связаны с подозрительной PowerShell-активностью?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 72774,
+      "api_latency_ms": 72741,
+      "is_answerable": true,
+      "confidence": 0.7338855333333333,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        5
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1138.6134999993374,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Подозрительная PowerShell-активность может быть связана с следующими сценариями атаки: phishing-вложением, загрузчиком malware, reverse shell, кражей учетных данных, перемещением между узлами, реконструкцией, сохранением устойчивости, отключением защитных средств [1]. Для подтверждения атаки необходимо проверить сетевую активность, включая внешние соединения, обращения к IP-адресам и доменам, HTTP/HTTPS запросы, загрузку исполняемых файлов и домены с плохой репутацией [5].",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 55,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.8511417,
+          "reranker_score": 10.815384864807129
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 51,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.6460606,
+          "reranker_score": 1.8691051006317139
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 49,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7044543,
+          "reranker_score": -0.27006834745407104
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 58,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.6902099,
+          "reranker_score": -0.3620913624763489
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 53,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.66841316,
+          "reranker_score": -0.49645885825157166
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 11,
+      "iteration": 1,
+      "question_id": "q011",
+      "question": "Какие первые действия нужны при ransomware-инциденте?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 76065,
+      "api_latency_ms": 76042,
+      "is_answerable": true,
+      "confidence": 0.7946970966666665,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1146.9372999999905,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "При подтверждённом или вероятном ransomware-инциденте первые действия включают: изоляцию заражённых хостов от сети, сохранение ransom note и зашифрованных файлов, фиксацию времени обнаружения, проверку распространения на другие системы, ограничение доступа к резервным копиям, уведомление IR-команды и проверку состояния резервных копий [1].",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.8660225,
+          "reranker_score": 10.907779693603516
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 44,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.71362233,
+          "reranker_score": 7.302289009094238
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 37,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.80444646,
+          "reranker_score": 6.260829448699951
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 46,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.70987356,
+          "reranker_score": 5.729094505310059
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 45,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7659866,
+          "reranker_score": 4.354483127593994
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 12,
+      "iteration": 1,
+      "question_id": "q012",
+      "question": "Почему не стоит сразу выключать хост при ransomware?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 61744,
+      "api_latency_ms": 61725,
+      "is_answerable": true,
+      "confidence": 0.7653297,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1199.2868999950588,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Почему не стоит сразу выключать хост при ransomware?\n\nИсточники: [1]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 41,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.8052578,
+          "reranker_score": 10.87464427947998
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.75504726,
+          "reranker_score": -1.0775574445724487
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 45,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.73568404,
+          "reranker_score": -2.3288180828094482
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 43,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.64911216,
+          "reranker_score": -5.229426860809326
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 44,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.6362896,
+          "reranker_score": -5.834757328033447
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 13,
+      "iteration": 1,
+      "question_id": "q013",
+      "question": "Какие признаки могут указывать на ransomware?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 83437,
+      "api_latency_ms": 83418,
+      "is_answerable": true,
+      "confidence": 0.7735289233333332,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1117.5992999997106,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "К типичным признакам ransomware относятся: появление файлов с инструкциями по оплате выкупа [1], изменение расширений у большого числа файлов [1,4], массовое создание или удаление файлов [1], остановка сервисов резервного копирования [1], удаление shadow copies [1,3], отключение антивируса или EDR [1], подозрительная активность PowerShell, PsExec, WMI или RDP [1,5]. Также отмечаются: необычные шаблоны аутентификации [3], массовые изменения расширений файлов [4], резкий рост операций записи [4], недоступность сетевых папок [4], сообщения пользователей о невозможности открыть файлы [4], аномальные трафики SMB [3].\n\nИсточники: [5]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 39,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.8199858,
+          "reranker_score": 6.717813968658447
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 46,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.73008347,
+          "reranker_score": 2.125134229660034
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 13,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "external_id": null,
+          "score": 0.7705175,
+          "reranker_score": 0.4755707085132599
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 38,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.70849264,
+          "reranker_score": -1.0732989311218262
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 43,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7286473,
+          "reranker_score": -1.8894290924072266
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 14,
+      "iteration": 1,
+      "question_id": "q014",
+      "question": "Что нужно проверить для оценки распространения ransomware?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 83033,
+      "api_latency_ms": 83014,
+      "is_answerable": true,
+      "confidence": 0.7924436,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        3
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1137.1776999949361,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Для оценки распространения ransomware необходимо проверить:\n- похожие симптомы на других хостах;\n- подключения через RDP;\n- использование PsExec, WMI или SMB;\n- массовые обращения к сетевым папкам;\n- подозрительные входы доменных пользователей;\n- компрометацию учётных записей администраторов [1].\nТакже важно проверить:\n- подозрительную активность PowerShell;\n- необычные паттерны аутентификации;\n- массовые изменения файлов;\n- аномальные трафики SMB;\n- доступ к резервным копиям [3].",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 43,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.8008701,
+          "reranker_score": 6.138380527496338
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.8194191,
+          "reranker_score": 3.629396677017212
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 13,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "external_id": null,
+          "score": 0.7570416,
+          "reranker_score": 2.1828081607818604
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 44,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.76951784,
+          "reranker_score": 1.080933928489685
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 42,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.73337734,
+          "reranker_score": -0.8098783493041992
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 15,
+      "iteration": 1,
+      "question_id": "q015",
+      "question": "Как защитить резервные копии во время ransomware-инцидента?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 75317,
+      "api_latency_ms": 75284,
+      "is_answerable": true,
+      "confidence": 0.7688016166666666,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        2,
+        5
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1406.729300004372,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Для защиты резервных копий во время ransomware-инцидента необходимо: проверить доступность резервных копий [1], изолировать backup-хранилище от заражённой сети [1,2], проверить, не были ли удалены или зашифрованы backup-файлы [1], не начинать восстановление до завершения containment [1], и проверить резервные копии на наличие вредоносных файлов [1]. Также важно сохранить состояние резервных копий для дальнейшего анализа [2,5].\n\nИсточники: [2], [5]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 44,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.83455455,
+          "reranker_score": 10.168851852416992
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.7745912,
+          "reranker_score": 4.553023338317871
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 37,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.6972591,
+          "reranker_score": 1.4114875793457031
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 14,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "external_id": null,
+          "score": 0.6623832,
+          "reranker_score": 0.30288782715797424
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 46,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "external_id": null,
+          "score": 0.64716625,
+          "reranker_score": -0.8065102696418762
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 16,
+      "iteration": 1,
+      "question_id": "q016",
+      "question": "What is OS Credential Dumping?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 43727,
+      "api_latency_ms": 43707,
+      "is_answerable": true,
+      "confidence": 0.5715328533333334,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        4
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 890.5356000032043,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "OS Credential Dumping (T1003) is a technique where adversaries extract credentials (e.g., hashes or clear text passwords) from OS caches, memory, or structures to gain unauthorized access. This allows lateral movement and access to restricted information. It affects Windows, Linux, and macOS systems. Tools like Mimikatz are commonly used for this purpose.\n\nИсточники: [1], [4]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 258,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "external_id": "T1003",
+          "score": 0.6642168,
+          "reranker_score": 7.674670696258545
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 264,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "external_id": "T1003",
+          "score": 0.5756873,
+          "reranker_score": 2.246217966079712
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 263,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "external_id": "T1003",
+          "score": 0.47469446,
+          "reranker_score": 1.6339644193649292
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 260,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "external_id": "T1003",
+          "score": 0.7145514,
+          "reranker_score": 1.4009544849395752
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 262,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "external_id": "T1003",
+          "score": 0.67586696,
+          "reranker_score": 1.2371002435684204
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 17,
+      "iteration": 1,
+      "question_id": "q017",
+      "question": "Why do adversaries use OS Credential Dumping?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 56562,
+      "api_latency_ms": 56539,
+      "is_answerable": true,
+      "confidence": 0.53892223,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        2
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1092.02030000597,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Adversaries use OS Credential Dumping (T1003) to extract credentials from OS caches, memory, or structures, which can then be used for lateral movement and accessing restricted information. This technique is often combined with brute force attacks (T1110) to exploit valid accounts after initial compromise.\n\nИсточники: [1], [2]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 258,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "external_id": "T1003",
+          "score": 0.59528446,
+          "reranker_score": 8.60510540008545
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 408,
+          "document_id": 40,
+          "title": "T1110 — Brute Force",
+          "source_type": "mitre_attack",
+          "external_id": "T1110",
+          "score": 0.5059613,
+          "reranker_score": 0.6389042735099792
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 988,
+          "document_id": 15,
+          "title": "Potential Credential Dumping Via LSASS Process Clone",
+          "source_type": "sigma_rule",
+          "external_id": "c8da0dfd-4ed0-4b68-962d-13c9c884384e",
+          "score": 0.51552093,
+          "reranker_score": -3.5525496006011963
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 264,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "external_id": "T1003",
+          "score": 0.548499,
+          "reranker_score": -5.694702625274658
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 883,
+          "document_id": 74,
+          "title": "Credential Dumping Activity By Python Based Tool",
+          "source_type": "sigma_rule",
+          "external_id": "f8be3e82-46a3-4e4e-ada5-8e538ae8b9c9",
+          "score": 0.4967677,
+          "reranker_score": -6.134337902069092
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 18,
+      "iteration": 1,
+      "question_id": "q018",
+      "question": "How can adversaries obtain credentials from LSASS memory?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 80364,
+      "api_latency_ms": 80342,
+      "is_answerable": true,
+      "confidence": 0.5753024766666667,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        2,
+        3
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1674.0124999996624,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Adversaries can obtain credentials from LSASS memory through OS Credential Dumping techniques. Using tools like procdump, they can dump LSASS process memory to extract credentials (e.g., with command: procdump -ma lsass.exe lsass_dump). This allows access to plaintext passwords and encrypted credentials stored in LSASS, which can then be used for lateral movement. Additionally, adversaries may exploit Windows Security Support Provider (SSP) DLLs loaded into LSASS to access encrypted and plaintext passwords, particularly by modifying registry keys to add new SSPs.\n\nИсточники: [1], [2], [3]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 265,
+          "document_id": 24,
+          "title": "T1003.001 — LSASS Memory",
+          "source_type": "mitre_attack",
+          "external_id": "T1003.001",
+          "score": 0.74859846,
+          "reranker_score": 10.12901782989502
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 267,
+          "document_id": 24,
+          "title": "T1003.001 — LSASS Memory",
+          "source_type": "mitre_attack",
+          "external_id": "T1003.001",
+          "score": 0.42838097,
+          "reranker_score": 4.795954704284668
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 258,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "external_id": "T1003",
+          "score": 0.548928,
+          "reranker_score": 2.7307817935943604
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 492,
+          "document_id": 48,
+          "title": "T1555 — Credentials from Password Stores",
+          "source_type": "mitre_attack",
+          "external_id": "T1555",
+          "score": 0.5256274,
+          "reranker_score": -1.7355319261550903
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 484,
+          "document_id": 47,
+          "title": "T1552.001 — Credentials In Files",
+          "source_type": "mitre_attack",
+          "external_id": "T1552.001",
+          "score": 0.5453417,
+          "reranker_score": -2.2373783588409424
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 19,
+      "iteration": 1,
+      "question_id": "q019",
+      "question": "What does the MITRE ATT&CK PowerShell technique describe?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 38349,
+      "api_latency_ms": 38330,
+      "is_answerable": true,
+      "confidence": 0.69010198,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        2
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 589.2976000031922,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "The MITRE ATT&CK technique T1059.001 describes PowerShell execution as a method for executing code on a target system. This technique is associated with the execution tactic in the MITRE ATT&CK framework [1][2].",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 354,
+          "document_id": 33,
+          "title": "T1059.001 — PowerShell",
+          "source_type": "mitre_attack",
+          "external_id": "T1059.001",
+          "score": 0.64966273,
+          "reranker_score": 3.2783725261688232
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 349,
+          "document_id": 33,
+          "title": "T1059.001 — PowerShell",
+          "source_type": "mitre_attack",
+          "external_id": "T1059.001",
+          "score": 0.80511117,
+          "reranker_score": -1.0946282148361206
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 1025,
+          "document_id": 90,
+          "title": "Potential Powershell ReverseShell Connection",
+          "source_type": "sigma_rule",
+          "external_id": "edc2f8ae-2412-4dfd-b9d5-0c57727e70be",
+          "score": 0.61553204,
+          "reranker_score": -1.5949574708938599
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 269,
+          "document_id": 24,
+          "title": "T1003.001 — LSASS Memory",
+          "source_type": "mitre_attack",
+          "external_id": "T1003.001",
+          "score": 0.6571187,
+          "reranker_score": -3.002695083618164
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 429,
+          "document_id": 42,
+          "title": "T1218.010 — Regsvr32",
+          "source_type": "mitre_attack",
+          "external_id": "T1218.010",
+          "score": 0.63628685,
+          "reranker_score": -3.513129711151123
+        }
+      ],
+      "error": null
+    },
+    {
+      "sequence": 20,
+      "iteration": 1,
+      "question_id": "q020",
+      "question": "How is spearphishing attachment used to gain execution?",
+      "expected_answerable": null,
+      "status": "success",
+      "http_status": 200,
+      "elapsed_ms": 72072,
+      "api_latency_ms": 72049,
+      "is_answerable": true,
+      "confidence": 0.5526022233333333,
+      "sources_count": 5,
+      "cited_source_ids": [
+        1,
+        2,
+        3
+      ],
+      "provider": "ollama",
+      "retrieval_strategy": "hybrid",
+      "reranker_enabled": true,
+      "reranker_applied": true,
+      "reranker_latency_ms": 1052.2825000007288,
+      "fallback_used": false,
+      "rejection_reason": null,
+      "answer": "Spearphishing attachment is used to gain execution by sending malicious email attachments (e.g., Office documents, executables, PDFs) that exploit vulnerabilities or directly execute on the user's system after opening. Adversaries manipulate file extensions and icons to disguise executables as legitimate documents. User execution (T1204) is required for payload delivery, often triggered by social engineering tactics like fake credentials or decryption instructions. This technique relies on user interaction to bypass security defenses.\n\nИсточники: [1], [2], [3]",
+      "sources": [
+        {
+          "citation_id": 1,
+          "chunk_id": 507,
+          "document_id": 50,
+          "title": "T1566.001 — Spearphishing Attachment",
+          "source_type": "mitre_attack",
+          "external_id": "T1566.001",
+          "score": 0.66472113,
+          "reranker_score": 8.702682495117188
+        },
+        {
+          "citation_id": 2,
+          "chunk_id": 508,
+          "document_id": 50,
+          "title": "T1566.001 — Spearphishing Attachment",
+          "source_type": "mitre_attack",
+          "external_id": "T1566.001",
+          "score": 0.6302259,
+          "reranker_score": 2.2271535396575928
+        },
+        {
+          "citation_id": 3,
+          "chunk_id": 416,
+          "document_id": 41,
+          "title": "T1204.002 — Malicious File",
+          "source_type": "mitre_attack",
+          "external_id": "T1204.002",
+          "score": 0.36285964,
+          "reranker_score": 1.6114028692245483
+        },
+        {
+          "citation_id": 4,
+          "chunk_id": 509,
+          "document_id": 50,
+          "title": "T1566.001 — Spearphishing Attachment",
+          "source_type": "mitre_attack",
+          "external_id": "T1566.001",
+          "score": 0.52275896,
+          "reranker_score": 0.34653928875923157
+        },
+        {
+          "citation_id": 5,
+          "chunk_id": 517,
+          "document_id": 51,
+          "title": "T1566.002 — Spearphishing Link",
+          "source_type": "mitre_attack",
+          "external_id": "T1566.002",
+          "score": 0.4651536,
+          "reranker_score": -1.7178226709365845
+        }
+      ],
+      "error": null
+    }
+  ]
+}

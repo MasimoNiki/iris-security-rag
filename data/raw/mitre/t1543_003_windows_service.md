@@ -1,0 +1,69 @@
+---
+title: T1543.003 — Windows Service
+source_type: mitre_attack
+external_id: T1543.003
+source_url: https://attack.mitre.org/techniques/T1543/003
+source_revision: 1.6@a6c366439ede
+language: en
+domain: enterprise_attack
+tags:
+- mitre_attack
+- t1543.003
+- attack.persistence
+- attack.privilege-escalation
+repository: mitre-attack/attack-stix-data
+repository_revision: a6c366439edee3a87b79cf90dc0b93f5d7975956
+upstream_path: enterprise-attack/enterprise-attack.json
+stix_id: attack-pattern--2959d63f-73fd-46a1-abd2-109d7dcede32
+stix_modified: '2026-05-12T15:12:00.623Z'
+technique_version: '1.6'
+is_subtechnique: true
+tactics:
+- persistence
+- privilege-escalation
+platforms:
+- Windows
+permissions_required: []
+data_sources: []
+---
+
+# T1543.003 — Windows Service
+
+## Description
+
+Adversaries may create or modify Windows services to repeatedly execute malicious payloads as part of persistence. When Windows boots up, it starts programs or applications called services that perform background system functions.(Citation: TechNet Services) Windows service configuration information, including the file path to the service's executable or recovery programs/commands, is stored in the Windows Registry.
+
+Adversaries may install a new service or modify an existing service to execute at startup in order to persist on a system. Service configurations can be set or modified using system utilities (such as sc.exe), by directly modifying the Registry, or by interacting directly with the Windows API. 
+
+Adversaries may also use services to install and execute malicious drivers. For example, after dropping a driver file (ex: `.sys`) to disk, the payload can be loaded and registered via [Native API](https://attack.mitre.org/techniques/T1106) functions such as `CreateServiceW()` (or manually via functions such as `ZwLoadDriver()` and `ZwSetValueKey()`), by creating the required service Registry values (i.e. [Modify Registry](https://attack.mitre.org/techniques/T1112)), or by using command-line utilities such as `PnPUtil.exe`.(Citation: Symantec W.32 Stuxnet Dossier)(Citation: Crowdstrike DriveSlayer February 2022)(Citation: Unit42 AcidBox June 2020) Adversaries may leverage these drivers as [Rootkit](https://attack.mitre.org/techniques/T1014)s to hide the presence of malicious activity on a system. Adversaries may also load a signed yet vulnerable driver onto a compromised machine (known as "Bring Your Own Vulnerable Driver" (BYOVD)) as part of [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068).(Citation: ESET InvisiMole June 2020)(Citation: Unit42 AcidBox June 2020)
+
+Services may be created with administrator privileges but are executed under SYSTEM privileges, so an adversary may also use a service to escalate privileges. Adversaries may also directly start services through [Service Execution](https://attack.mitre.org/techniques/T1569/002).
+
+To make detection analysis more challenging, malicious services may also incorporate [Masquerade Task or Service](https://attack.mitre.org/techniques/T1036/004) (ex: using a service and/or payload name related to a legitimate OS or benign software component). Adversaries may also create ‘hidden’ services (i.e., [Hide Artifacts](https://attack.mitre.org/techniques/T1564)), for example by using the `sc sdset` command to set service permissions via the Service Descriptor Definition Language (SDDL). This may hide a Windows service from the view of standard service enumeration methods such as `Get-Service`, `sc query`, and `services.exe`.(Citation: SANS 1)(Citation: SANS 2)
+
+## ATT&CK tactics
+
+- persistence
+- privilege-escalation
+
+## Platforms
+
+- Windows
+
+## Permissions required
+
+- Not specified
+
+## Data sources
+
+- Not specified
+
+## Detection
+
+Detection guidance is not present in this technique object.
+
+## Source
+
+- Official ATT&CK page: https://attack.mitre.org/techniques/T1543/003
+- STIX object: attack-pattern--2959d63f-73fd-46a1-abd2-109d7dcede32
+- ATT&CK object version: 1.6

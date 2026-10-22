@@ -1,0 +1,415 @@
+{
+  "generated_at": "2026-07-27T20:21:19.944178+00:00",
+  "status": "needs_attention",
+  "postgres": {
+    "document_count": 108,
+    "chunk_count": 994,
+    "average_chunks_per_document": 9.2,
+    "documents_by_source_type": {
+      "mitre_attack": 30,
+      "nist": 1,
+      "owasp_top10": 10,
+      "runbook": 3,
+      "sigma_rule": 64
+    },
+    "chunks_by_source_type": {
+      "mitre_attack": 277,
+      "nist": 10,
+      "owasp_top10": 214,
+      "runbook": 32,
+      "sigma_rule": 461
+    },
+    "legacy_source_types": {},
+    "documents_without_chunks": {
+      "count": 0,
+      "documents": []
+    },
+    "missing_metadata": {
+      "external_id": {
+        "count": 8,
+        "percentage": 7.41,
+        "documents": [
+          {
+            "id": 2,
+            "title": "Ransomware Risk Management Summary",
+            "source_type": "nist",
+            "external_id": null,
+            "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+          },
+          {
+            "id": 4,
+            "title": "Runbook: Первичный разбор phishing-инцидента",
+            "source_type": "runbook",
+            "external_id": null,
+            "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+          },
+          {
+            "id": 5,
+            "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+            "source_type": "runbook",
+            "external_id": null,
+            "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+          },
+          {
+            "id": 6,
+            "title": "Runbook: Анализ подозрительной PowerShell-активности",
+            "source_type": "runbook",
+            "external_id": null,
+            "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+          },
+          {
+            "id": 12,
+            "title": "PowerShell Web Access Feature Enabled Via DISM",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_dism_enable_powershell_web_access_feature.md"
+          },
+          {
+            "id": 13,
+            "title": "LSASS Process Reconnaissance Via Findstr.EXE",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_findstr_lsass.md"
+          },
+          {
+            "id": 16,
+            "title": "Outlook EnableUnsafeClientMailRules Setting Enabled",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_office_outlook_enable_unsafe_client_mail_rules.md"
+          },
+          {
+            "id": 19,
+            "title": "AADInternals PowerShell Cmdlets Execution - ProccessCreation",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_powershell_aadinternals_cmdlets_execution.md"
+          }
+        ]
+      },
+      "source_url": {
+        "count": 8,
+        "percentage": 7.41,
+        "documents": [
+          {
+            "id": 2,
+            "title": "Ransomware Risk Management Summary",
+            "source_type": "nist",
+            "external_id": null,
+            "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+          },
+          {
+            "id": 4,
+            "title": "Runbook: Первичный разбор phishing-инцидента",
+            "source_type": "runbook",
+            "external_id": null,
+            "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+          },
+          {
+            "id": 5,
+            "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+            "source_type": "runbook",
+            "external_id": null,
+            "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+          },
+          {
+            "id": 6,
+            "title": "Runbook: Анализ подозрительной PowerShell-активности",
+            "source_type": "runbook",
+            "external_id": null,
+            "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+          },
+          {
+            "id": 12,
+            "title": "PowerShell Web Access Feature Enabled Via DISM",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_dism_enable_powershell_web_access_feature.md"
+          },
+          {
+            "id": 13,
+            "title": "LSASS Process Reconnaissance Via Findstr.EXE",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_findstr_lsass.md"
+          },
+          {
+            "id": 16,
+            "title": "Outlook EnableUnsafeClientMailRules Setting Enabled",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_office_outlook_enable_unsafe_client_mail_rules.md"
+          },
+          {
+            "id": 19,
+            "title": "AADInternals PowerShell Cmdlets Execution - ProccessCreation",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_powershell_aadinternals_cmdlets_execution.md"
+          }
+        ]
+      },
+      "language": {
+        "count": 0,
+        "percentage": 0.0,
+        "documents": []
+      },
+      "domain": {
+        "count": 0,
+        "percentage": 0.0,
+        "documents": []
+      },
+      "checksum": {
+        "count": 0,
+        "percentage": 0.0,
+        "documents": []
+      },
+      "local_path": {
+        "count": 0,
+        "percentage": 0.0,
+        "documents": []
+      },
+      "source_revision": {
+        "count": 8,
+        "percentage": 7.41,
+        "documents": [
+          {
+            "id": 2,
+            "title": "Ransomware Risk Management Summary",
+            "source_type": "nist",
+            "external_id": null,
+            "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+          },
+          {
+            "id": 4,
+            "title": "Runbook: Первичный разбор phishing-инцидента",
+            "source_type": "runbook",
+            "external_id": null,
+            "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+          },
+          {
+            "id": 5,
+            "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+            "source_type": "runbook",
+            "external_id": null,
+            "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+          },
+          {
+            "id": 6,
+            "title": "Runbook: Анализ подозрительной PowerShell-активности",
+            "source_type": "runbook",
+            "external_id": null,
+            "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+          },
+          {
+            "id": 12,
+            "title": "PowerShell Web Access Feature Enabled Via DISM",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_dism_enable_powershell_web_access_feature.md"
+          },
+          {
+            "id": 13,
+            "title": "LSASS Process Reconnaissance Via Findstr.EXE",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_findstr_lsass.md"
+          },
+          {
+            "id": 16,
+            "title": "Outlook EnableUnsafeClientMailRules Setting Enabled",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_office_outlook_enable_unsafe_client_mail_rules.md"
+          },
+          {
+            "id": 19,
+            "title": "AADInternals PowerShell Cmdlets Execution - ProccessCreation",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_powershell_aadinternals_cmdlets_execution.md"
+          }
+        ]
+      },
+      "tags": {
+        "count": 0,
+        "percentage": 0.0,
+        "documents": []
+      }
+    },
+    "missing_required_metadata": {
+      "external_id": {
+        "count": 5,
+        "percentage": 4.63,
+        "documents": [
+          {
+            "id": 2,
+            "title": "Ransomware Risk Management Summary",
+            "source_type": "nist",
+            "external_id": null,
+            "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+          },
+          {
+            "id": 12,
+            "title": "PowerShell Web Access Feature Enabled Via DISM",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_dism_enable_powershell_web_access_feature.md"
+          },
+          {
+            "id": 13,
+            "title": "LSASS Process Reconnaissance Via Findstr.EXE",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_findstr_lsass.md"
+          },
+          {
+            "id": 16,
+            "title": "Outlook EnableUnsafeClientMailRules Setting Enabled",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_office_outlook_enable_unsafe_client_mail_rules.md"
+          },
+          {
+            "id": 19,
+            "title": "AADInternals PowerShell Cmdlets Execution - ProccessCreation",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_powershell_aadinternals_cmdlets_execution.md"
+          }
+        ]
+      },
+      "source_revision": {
+        "count": 5,
+        "percentage": 4.63,
+        "documents": [
+          {
+            "id": 2,
+            "title": "Ransomware Risk Management Summary",
+            "source_type": "nist",
+            "external_id": null,
+            "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+          },
+          {
+            "id": 12,
+            "title": "PowerShell Web Access Feature Enabled Via DISM",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_dism_enable_powershell_web_access_feature.md"
+          },
+          {
+            "id": 13,
+            "title": "LSASS Process Reconnaissance Via Findstr.EXE",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_findstr_lsass.md"
+          },
+          {
+            "id": 16,
+            "title": "Outlook EnableUnsafeClientMailRules Setting Enabled",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_office_outlook_enable_unsafe_client_mail_rules.md"
+          },
+          {
+            "id": 19,
+            "title": "AADInternals PowerShell Cmdlets Execution - ProccessCreation",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_powershell_aadinternals_cmdlets_execution.md"
+          }
+        ]
+      },
+      "tags": {
+        "count": 0,
+        "percentage": 0.0,
+        "documents": []
+      },
+      "local_path": {
+        "count": 0,
+        "percentage": 0.0,
+        "documents": []
+      },
+      "source_url": {
+        "count": 5,
+        "percentage": 4.63,
+        "documents": [
+          {
+            "id": 2,
+            "title": "Ransomware Risk Management Summary",
+            "source_type": "nist",
+            "external_id": null,
+            "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+          },
+          {
+            "id": 12,
+            "title": "PowerShell Web Access Feature Enabled Via DISM",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_dism_enable_powershell_web_access_feature.md"
+          },
+          {
+            "id": 13,
+            "title": "LSASS Process Reconnaissance Via Findstr.EXE",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_findstr_lsass.md"
+          },
+          {
+            "id": 16,
+            "title": "Outlook EnableUnsafeClientMailRules Setting Enabled",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_office_outlook_enable_unsafe_client_mail_rules.md"
+          },
+          {
+            "id": 19,
+            "title": "AADInternals PowerShell Cmdlets Execution - ProccessCreation",
+            "source_type": "sigma_rule",
+            "external_id": null,
+            "local_path": "data/raw/sources/sigma/proc_creation_win_powershell_aadinternals_cmdlets_execution.md"
+          }
+        ]
+      },
+      "language": {
+        "count": 0,
+        "percentage": 0.0,
+        "documents": []
+      },
+      "domain": {
+        "count": 0,
+        "percentage": 0.0,
+        "documents": []
+      },
+      "checksum": {
+        "count": 0,
+        "percentage": 0.0,
+        "documents": []
+      }
+    },
+    "duplicates": {
+      "checksum": [],
+      "local_path": [],
+      "external_id": []
+    }
+  },
+  "qdrant": {
+    "available": true,
+    "collection_exists": true,
+    "collection_name": "iris_chunks",
+    "points_count": 994,
+    "indexed_vectors_count": 0,
+    "mapped_chunk_ids_count": 994,
+    "unmapped_point_ids": [],
+    "missing_in_qdrant": [],
+    "missing_in_qdrant_count": 0,
+    "extra_in_qdrant": [],
+    "extra_in_qdrant_count": 0,
+    "error": null
+  },
+  "issues": [
+    "Не заполнено обязательное поле external_id: 5 документов.",
+    "Не заполнено обязательное поле source_revision: 5 документов.",
+    "Не заполнено обязательное поле source_url: 5 документов."
+  ]
+}

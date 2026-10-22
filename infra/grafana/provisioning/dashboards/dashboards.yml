@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: "IRIS RAG Dashboards"
+    orgId: 1
+    folder: "IRIS RAG"
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards

@@ -1,0 +1,605 @@
+- id: q001
+  question: "Что должен проверить аналитик при подозрении на phishing-письмо?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+  expected_source_keywords:
+    - "SPF"
+    - "DKIM"
+    - "DMARC"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, phishing, email]
+
+- id: q002
+  question: "Какие признаки высокого риска есть у phishing-инцидента?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+  expected_source_keywords:
+    - "Признаки высокого риска"
+    - "пользователь ввёл пароль"
+    - "фишинговую страницу"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, phishing, incident-response]
+
+- id: q003
+  question: "Что нужно сделать с подозрительными ссылками в письме?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+  expected_source_keywords:
+    - "Проверка ссылок"
+    - "URL"
+    - "threat intelligence"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, phishing, url]
+
+- id: q004
+  question: "Какие вложения в письме считаются особенно опасными?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+  expected_source_keywords:
+    - "exe"
+    - "js"
+    - "ps1"
+    - "lnk"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, phishing, malware]
+
+- id: q005
+  question: "Какие статусы классификации могут быть у phishing-инцидента?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+  expected_source_keywords:
+    - "confirmed phishing"
+    - "credential phishing"
+    - "malware delivery"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, phishing, classification]
+
+- id: q006
+  question: "Какие параметры PowerShell считаются подозрительными?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+  expected_source_keywords:
+    - "EncodedCommand"
+    - "ExecutionPolicy Bypass"
+    - "NoProfile"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, powershell, windows]
+
+- id: q007
+  question: "Почему запуск PowerShell из Word может быть опасным?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+  expected_source_keywords:
+    - "winword.exe"
+    - "Microsoft Word"
+    - "макросом"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, powershell, office]
+
+- id: q008
+  question: "Что нужно проверить при сетевой активности PowerShell?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+  expected_source_keywords:
+    - "сетевой активности"
+    - "IP-адресам"
+    - "доменам"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, powershell, network]
+
+- id: q009
+  question: "Что делать, если команда PowerShell закодирована в Base64?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+  expected_source_keywords:
+    - "Base64"
+    - "декодировать"
+    - "изолированной среде"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, powershell, base64]
+
+- id: q010
+  question: "Какие сценарии атаки связаны с подозрительной PowerShell-активностью?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+  expected_source_keywords:
+    - "reverse shell"
+    - "credential theft"
+    - "lateral movement"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, powershell, attack]
+
+- id: q011
+  question: "Какие первые действия нужны при ransomware-инциденте?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+  expected_source_keywords:
+    - "Изолировать заражённые хосты"
+    - "резервных копий"
+    - "сбор артефактов"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, ransomware, incident-response]
+
+- id: q012
+  question: "Почему не стоит сразу выключать хост при ransomware?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+  expected_source_keywords:
+    - "не стоит сразу выключать"
+    - "активных процессов"
+    - "сетевых соединений"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, ransomware, forensics]
+
+- id: q013
+  question: "Какие признаки могут указывать на ransomware?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+  expected_source_keywords:
+    - "ransom note"
+    - "расширений файлов"
+    - "shadow copies"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, ransomware, detection]
+
+- id: q014
+  question: "Что нужно проверить для оценки распространения ransomware?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+  expected_source_keywords:
+    - "RDP"
+    - "PsExec"
+    - "WMI"
+    - "SMB"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, ransomware, lateral-movement]
+
+- id: q015
+  question: "Как защитить резервные копии во время ransomware-инцидента?"
+  expected_local_paths:
+    - "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+  expected_source_keywords:
+    - "backup"
+    - "резервных копий"
+    - "изолировать backup-хранилище"
+  min_keyword_matches: 2
+  language: "ru"
+  tags: [runbook, ransomware, backup]
+
+- id: q016
+  question: "What is OS Credential Dumping?"
+  expected_external_ids: ["T1003"]
+  expected_source_keywords:
+    - "OS Credential Dumping"
+    - "credentials"
+    - "operating system"
+  min_keyword_matches: 2
+  language: "en"
+  tags: [mitre, credential-access]
+
+- id: q017
+  question: "Why do adversaries use OS Credential Dumping?"
+  expected_external_ids: ["T1003"]
+  expected_source_keywords:
+    - "credentials"
+    - "lateral movement"
+    - "access"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, credential-access]
+
+- id: q018
+  question: "How can adversaries obtain credentials from LSASS memory?"
+  expected_external_ids: ["T1003.001"]
+  expected_source_keywords:
+    - "LSASS Memory"
+    - "process memory"
+    - "credential material"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, lsass, windows]
+
+- id: q019
+  question: "What does the MITRE ATT&CK PowerShell technique describe?"
+  expected_external_ids: ["T1059.001"]
+  expected_source_keywords:
+    - "PowerShell"
+    - "Command and Scripting Interpreter"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, powershell, execution]
+
+- id: q020
+  question: "How is spearphishing attachment used to gain execution?"
+  expected_external_ids: ["T1566.001"]
+  expected_source_keywords:
+    - "Spearphishing Attachment"
+    - "malicious attachments"
+    - "email"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, phishing, initial-access]
+
+- id: q021
+  question: "How does spearphishing link differ from an email attachment?"
+  expected_external_ids: ["T1566.002"]
+  expected_source_keywords:
+    - "Spearphishing Link"
+    - "malicious link"
+    - "email"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, phishing, initial-access]
+
+- id: q022
+  question: "Why does a malicious file often require user execution?"
+  expected_external_ids: ["T1204.002"]
+  expected_source_keywords:
+    - "Malicious File"
+    - "user opening a malicious file"
+    - "execution"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, user-execution, malicious-file]
+
+- id: q023
+  question: "How can adversaries use Remote Desktop Protocol for lateral movement?"
+  expected_external_ids: ["T1021.001"]
+  expected_source_keywords:
+    - "Remote Desktop Protocol"
+    - "RDP"
+    - "remote system"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, rdp, lateral-movement]
+
+- id: q024
+  question: "What are SMB and Windows Admin Shares used for by adversaries?"
+  expected_external_ids: ["T1021.002"]
+  expected_source_keywords:
+    - "SMB/Windows Admin Shares"
+    - "network shares"
+    - "remote system"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, smb, lateral-movement]
+
+- id: q025
+  question: "How can Windows Management Instrumentation be abused?"
+  expected_external_ids: ["T1047"]
+  expected_source_keywords:
+    - "Windows Management Instrumentation"
+    - "WMI"
+    - "execute"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, wmi, execution]
+
+- id: q026
+  question: "What is Ingress Tool Transfer?"
+  expected_external_ids: ["T1105"]
+  expected_source_keywords:
+    - "Ingress Tool Transfer"
+    - "files"
+    - "external system"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, command-and-control, transfer]
+
+- id: q027
+  question: "How are web protocols used for command and control?"
+  expected_external_ids: ["T1071.001"]
+  expected_source_keywords:
+    - "Web Protocols"
+    - "HTTP"
+    - "command and control"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, web-protocols, command-and-control]
+
+- id: q028
+  question: "What does Exfiltration Over C2 Channel mean?"
+  expected_external_ids: ["T1041"]
+  expected_source_keywords:
+    - "Exfiltration Over C2 Channel"
+    - "command and control channel"
+    - "data"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, exfiltration, command-and-control]
+
+- id: q029
+  question: "What is Data Encrypted for Impact in a ransomware attack?"
+  expected_external_ids: ["T1486"]
+  expected_source_keywords:
+    - "Data Encrypted for Impact"
+    - "encrypt"
+    - "data"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, ransomware, impact]
+
+- id: q030
+  question: "How do attackers inhibit system recovery?"
+  expected_external_ids: ["T1490"]
+  expected_source_keywords:
+    - "Inhibit System Recovery"
+    - "recovery"
+    - "backup"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [mitre, ransomware, recovery]
+
+- id: q031
+  question: "What is Broken Access Control in OWASP Top 10:2025?"
+  expected_external_ids: ["A01:2025"]
+  expected_source_keywords:
+    - "Broken Access Control"
+    - "authorization"
+    - "access control"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [owasp, access-control]
+
+- id: q032
+  question: "What security misconfigurations does OWASP A02:2025 cover?"
+  expected_external_ids: ["A02:2025"]
+  expected_source_keywords:
+    - "Security Misconfiguration"
+    - "configuration"
+    - "security"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [owasp, misconfiguration]
+
+- id: q033
+  question: "What are Software Supply Chain Failures in OWASP Top 10:2025?"
+  expected_external_ids: ["A03:2025"]
+  expected_source_keywords:
+    - "Software Supply Chain Failures"
+    - "dependencies"
+    - "supply chain"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [owasp, supply-chain]
+
+- id: q034
+  question: "What does OWASP A04:2025 say about Cryptographic Failures?"
+  expected_external_ids: ["A04:2025"]
+  expected_source_keywords:
+    - "Cryptographic Failures"
+    - "encryption"
+    - "cryptographic"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [owasp, cryptography]
+
+- id: q035
+  question: "How does OWASP describe Injection vulnerabilities?"
+  expected_external_ids: ["A05:2025"]
+  expected_source_keywords:
+    - "Injection"
+    - "untrusted data"
+    - "query"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [owasp, injection]
+
+- id: q036
+  question: "What is Insecure Design according to OWASP A06:2025?"
+  expected_external_ids: ["A06:2025"]
+  expected_source_keywords:
+    - "Insecure Design"
+    - "design"
+    - "security"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [owasp, insecure-design]
+
+- id: q037
+  question: "What authentication problems are covered by OWASP A07:2025?"
+  expected_external_ids: ["A07:2025"]
+  expected_source_keywords:
+    - "Authentication Failures"
+    - "authentication"
+    - "identity"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [owasp, authentication]
+
+- id: q038
+  question: "What are Software or Data Integrity Failures?"
+  expected_external_ids: ["A08:2025"]
+  expected_source_keywords:
+    - "Software or Data Integrity Failures"
+    - "integrity"
+    - "software"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [owasp, integrity]
+
+- id: q039
+  question: "Why are security logging and alerting failures dangerous?"
+  expected_external_ids: ["A09:2025"]
+  expected_source_keywords:
+    - "Security Logging and Alerting Failures"
+    - "logging"
+    - "alerting"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [owasp, logging, alerting]
+
+- id: q040
+  question: "What is Mishandling of Exceptional Conditions in OWASP A10:2025?"
+  expected_external_ids: ["A10:2025"]
+  expected_source_keywords:
+    - "Mishandling of Exceptional Conditions"
+    - "exceptional conditions"
+    - "error"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [owasp, error-handling]
+
+- id: q041
+  question: "What behavior does the Sigma LSASS process clone rule detect?"
+  expected_local_paths:
+    - "data/raw/sources/sigma/proc_creation_win_lsass_process_clone.md"
+  expected_source_keywords:
+    - "LSASS Process Clone"
+    - "credential dumping"
+    - "lsass.exe"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [sigma, lsass, credential-dumping]
+
+- id: q042
+  question: "Which command-line keywords can indicate an LSASS dump?"
+  expected_local_paths:
+    - "data/raw/sources/sigma/proc_creation_win_susp_lsass_dmp_cli_keywords.md"
+  expected_source_keywords:
+    - "LSASS"
+    - "dump"
+    - "CommandLine"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [sigma, lsass, detection]
+
+- id: q043
+  question: "How can Sigma detect an Empire PowerShell launch?"
+  expected_local_paths:
+    - "data/raw/sources/sigma/proc_creation_win_hktl_empire_powershell_launch.md"
+  expected_source_keywords:
+    - "Empire"
+    - "PowerShell"
+    - "CommandLine"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [sigma, powershell, empire]
+
+- id: q044
+  question: "What Regsvr32 network behavior is suspicious in Sigma rules?"
+  expected_local_paths:
+    - "data/raw/sources/sigma/proc_creation_win_regsvr32_network_pattern.md"
+  expected_source_keywords:
+    - "Regsvr32"
+    - "network"
+    - "regsvr32.exe"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [sigma, regsvr32, network]
+
+- id: q045
+  question: "Which suspicious child processes can be spawned by Outlook?"
+  expected_local_paths:
+    - "data/raw/sources/sigma/proc_creation_win_office_outlook_susp_child_processes.md"
+  expected_source_keywords:
+    - "Outlook"
+    - "child process"
+    - "outlook.exe"
+  min_keyword_matches: 1
+  language: "en"
+  tags: [sigma, outlook, process-creation]
+
+- id: q046
+  question: "What are the main goals of ransomware risk management?"
+  expected_local_paths:
+    - "data/raw/nist/ransomware_risk_management_summary.md"
+  expected_source_keywords:
+    - "ransomware risk management"
+    - "detect suspicious activity early"
+    - "protect backups"
+  min_keyword_matches: 2
+  language: "en"
+  tags: [nist, ransomware, risk-management]
+
+- id: q047
+  question: "How should an organization prepare for ransomware risk?"
+  expected_local_paths:
+    - "data/raw/nist/ransomware_risk_management_summary.md"
+  expected_source_keywords:
+    - "incident response plan"
+    - "testing backup restoration"
+    - "critical assets"
+  min_keyword_matches: 2
+  language: "en"
+  tags: [nist, ransomware, preparation]
+
+- id: q048
+  question: "What preventive controls help reduce ransomware risk?"
+  expected_local_paths:
+    - "data/raw/nist/ransomware_risk_management_summary.md"
+  expected_source_keywords:
+    - "multi-factor authentication"
+    - "segmenting networks"
+    - "patching"
+  min_keyword_matches: 2
+  language: "en"
+  tags: [nist, ransomware, prevention]
+
+- id: q049
+  question: "What should ransomware detection focus on?"
+  expected_local_paths:
+    - "data/raw/nist/ransomware_risk_management_summary.md"
+  expected_source_keywords:
+    - "suspicious PowerShell"
+    - "mass file modification"
+    - "shadow copies"
+  min_keyword_matches: 2
+  language: "en"
+  tags: [nist, ransomware, detection]
+
+- id: q050
+  question: "What backup strategy is resilient against ransomware?"
+  expected_local_paths:
+    - "data/raw/nist/ransomware_risk_management_summary.md"
+  expected_source_keywords:
+    - "offline or immutable backups"
+    - "restoration testing"
+    - "backup repositories"
+  min_keyword_matches: 2
+  language: "en"
+  tags: [nist, ransomware, backup]
+
+- id: q051
+  question: "Какой EDR установлен на рабочей станции FIN-WS-042?"
+  answerable: false
+  language: "ru"
+  tags: [unanswerable, internal-asset]
+
+- id: q052
+  question: "Какой срок хранения логов утверждён внутренней политикой нашей компании?"
+  answerable: false
+  language: "ru"
+  tags: [unanswerable, internal-policy]
+
+- id: q053
+  question: "Was the employee account alice@example.com compromised yesterday?"
+  answerable: false
+  language: "en"
+  tags: [unanswerable, incident-specific]
+
+- id: q054
+  question: "What is the remediation deadline for the fictional CVE-2031-9999?"
+  answerable: false
+  language: "en"
+  tags: [unanswerable, fictional-cve]
+
+- id: q055
+  question: "Which firewall rule did our SOC team change last Friday?"
+  answerable: false
+  language: "en"
+  tags: [unanswerable, internal-change]

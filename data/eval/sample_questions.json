@@ -1,0 +1,32 @@
+[
+  {
+    "question": "Что должен проверить аналитик при подозрении на phishing-письмо?",
+    "expected_source": "phishing_triage_runbook_ru.md",
+    "expected_topics": ["отправитель", "ссылки", "вложения", "SPF", "DKIM", "DMARC"]
+  },
+  {
+    "question": "Какие признаки могут указывать на подозрительную PowerShell-активность?",
+    "expected_source": "suspicious_powershell_runbook_ru.md",
+    "expected_topics": ["EncodedCommand", "ExecutionPolicy Bypass", "IEX", "DownloadString", "родительский процесс"]
+  },
+  {
+    "question": "Какие первые действия нужны при ransomware-инциденте?",
+    "expected_source": "ransomware_initial_response_ru.md",
+    "expected_topics": ["изоляция", "сохранение доказательств", "резервные копии", "containment"]
+  },
+  {
+    "question": "What is OS Credential Dumping?",
+    "expected_source": "credential_dumping_t1003.md",
+    "expected_topics": ["credentials", "LSASS", "NTDS.dit", "lateral movement"]
+  },
+  {
+    "question": "What is Broken Access Control?",
+    "expected_source": "broken_access_control.md",
+    "expected_topics": ["authorization", "permissions", "horizontal privilege escalation", "vertical privilege escalation"]
+  },
+  {
+    "question": "How should an organization prepare for ransomware risk?",
+    "expected_source": "ransomware_risk_management_summary.md",
+    "expected_topics": ["incident response plan", "backups", "MFA", "network segmentation", "recovery"]
+  }
+]

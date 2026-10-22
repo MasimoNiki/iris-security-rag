@@ -1,0 +1,1062 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-27T20:15:19.382277+00:00",
+  "selection": {
+    "mitre_technique_ids": [
+      "T1059.001",
+      "T1566.001",
+      "T1566.002",
+      "T1204.002",
+      "T1003",
+      "T1003.001",
+      "T1555",
+      "T1552.001",
+      "T1110",
+      "T1087",
+      "T1082",
+      "T1057",
+      "T1018",
+      "T1021",
+      "T1021.001",
+      "T1021.002",
+      "T1047",
+      "T1569.002",
+      "T1547.001",
+      "T1053.005",
+      "T1543.003",
+      "T1105",
+      "T1071.001",
+      "T1095",
+      "T1041",
+      "T1560.001",
+      "T1486",
+      "T1490",
+      "T1070.004",
+      "T1218.010"
+    ],
+    "sigma_rule_count": 60,
+    "owasp_version": "2025"
+  },
+  "repositories": {
+    "mitre_attack": {
+      "repository": "mitre-attack/attack-stix-data",
+      "revision": "a6c366439edee3a87b79cf90dc0b93f5d7975956"
+    },
+    "sigma": {
+      "repository": "SigmaHQ/sigma",
+      "revision": "f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d",
+      "invalid_files_skipped": 0
+    },
+    "owasp": {
+      "repository": "OWASP/Top10",
+      "revision": "839169cad15199176f462616b891a1588265cde8"
+    }
+  },
+  "document_counts": {
+    "mitre_attack": 30,
+    "owasp_top10": 10,
+    "sigma_rule": 60
+  },
+  "documents": [
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1003",
+      "source_url": "https://attack.mitre.org/techniques/T1003",
+      "source_revision": "2.2@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/credential_dumping_t1003.md",
+      "generated_sha256": "ae6d308881f2edea7f546df9d2cc629abaafbd77c7177bbde123f15798e8ba44"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1003.001",
+      "source_url": "https://attack.mitre.org/techniques/T1003/001",
+      "source_revision": "1.5@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1003_001_lsass_memory.md",
+      "generated_sha256": "ee83e36a9da7d88c862a8b84ac8846551f4c63688eef0e064f785469150c9a89"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1018",
+      "source_url": "https://attack.mitre.org/techniques/T1018",
+      "source_revision": "3.6@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1018_remote_system_discovery.md",
+      "generated_sha256": "6aff980defaa4d547eeecb91c83300342065f0a94180fb76247399711de2d1e7"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1021",
+      "source_url": "https://attack.mitre.org/techniques/T1021",
+      "source_revision": "1.6@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1021_remote_services.md",
+      "generated_sha256": "4ec2753d263db360bd76896fed97b3209987403658eea49b1093044330bbb462"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1021.001",
+      "source_url": "https://attack.mitre.org/techniques/T1021/001",
+      "source_revision": "1.4@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1021_001_remote_desktop_protocol.md",
+      "generated_sha256": "d0d4c408c8040a82f423854d22436c43be8bc3127a6ec66df48d2f8e053eae62"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1021.002",
+      "source_url": "https://attack.mitre.org/techniques/T1021/002",
+      "source_revision": "1.3@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1021_002_smb_windows_admin_shares.md",
+      "generated_sha256": "fe07b379c5a521bc83b33028dc27e197785dd1a2b4005d194b8300cc8aefd9bb"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1041",
+      "source_url": "https://attack.mitre.org/techniques/T1041",
+      "source_revision": "2.3@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1041_exfiltration_over_c2_channel.md",
+      "generated_sha256": "1bd119c9156049ff05a028896e18d616b5d2dd97b8dddc2e7ae4ede52185ef37"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1047",
+      "source_url": "https://attack.mitre.org/techniques/T1047",
+      "source_revision": "1.6@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1047_windows_management_instrumentation.md",
+      "generated_sha256": "bc0f80359a4fee12004c15b2bd21b66fdddfcb93f33cbeeb95e98b99c4481eb3"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1053.005",
+      "source_url": "https://attack.mitre.org/techniques/T1053/005",
+      "source_revision": "1.8@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1053_005_scheduled_task.md",
+      "generated_sha256": "b79a86af9cde33e6bb64f2c9ee7c2cd0b10f9560e2970303abc3fa5f90b6dc0b"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1057",
+      "source_url": "https://attack.mitre.org/techniques/T1057",
+      "source_revision": "1.6@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1057_process_discovery.md",
+      "generated_sha256": "168682f7d5cb00074f0147756c7a4a719c71ab0f6ff08aab699f6100e758b962"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1059.001",
+      "source_url": "https://attack.mitre.org/techniques/T1059/001",
+      "source_revision": "1.5@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1059_001_powershell.md",
+      "generated_sha256": "ee7b9d5eecb012072e3e46a53820b655c8f12e5ec155b0beebbfa8eae12077ac"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1070.004",
+      "source_url": "https://attack.mitre.org/techniques/T1070/004",
+      "source_revision": "2.0@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1070_004_file_deletion.md",
+      "generated_sha256": "cc15bea841466e7fa6ebbd0bfe63b67bfeb104d4aa72b72d828654ad44ff12f3"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1071.001",
+      "source_url": "https://attack.mitre.org/techniques/T1071/001",
+      "source_revision": "1.5@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1071_001_web_protocols.md",
+      "generated_sha256": "65542b36799d2e172f11fd088091763e79f33bafd6ddf24b88d158e97868875b"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1082",
+      "source_url": "https://attack.mitre.org/techniques/T1082",
+      "source_revision": "3.0@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1082_system_information_discovery.md",
+      "generated_sha256": "2a182438cdb4d53d7cd95cd0db58112b6e3469446d9787b3f3f74045fa002d3f"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1087",
+      "source_url": "https://attack.mitre.org/techniques/T1087",
+      "source_revision": "2.6@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1087_account_discovery.md",
+      "generated_sha256": "0f1a16ad9a51bc40dbee81d54cc39d6c7811bd56b87a4a6c18d25ebe137e6047"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1095",
+      "source_url": "https://attack.mitre.org/techniques/T1095",
+      "source_revision": "2.4@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1095_non_application_layer_protocol.md",
+      "generated_sha256": "23d45fc7c1b5677956501d99c002954b2433971d5a7e32f2e6d78a438d6a4a0b"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1105",
+      "source_url": "https://attack.mitre.org/techniques/T1105",
+      "source_revision": "2.6@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1105_ingress_tool_transfer.md",
+      "generated_sha256": "438b6bf294bdaacb5aa7a3ebd5ae6ef51d5f0c4bf4fd2a3a87cd43743abe7900"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1110",
+      "source_url": "https://attack.mitre.org/techniques/T1110",
+      "source_revision": "2.8@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1110_brute_force.md",
+      "generated_sha256": "908879d62f9e1bae3158a9b26f80ad66233826dc84ac9f9264619bdcfcf5a04e"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1204.002",
+      "source_url": "https://attack.mitre.org/techniques/T1204/002",
+      "source_revision": "1.6@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1204_002_malicious_file.md",
+      "generated_sha256": "3cc688c3ef427e79c0cadfd901457dcb7471f2dd5f9c544ef5e87697296fe148"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1218.010",
+      "source_url": "https://attack.mitre.org/techniques/T1218/010",
+      "source_revision": "3.0@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1218_010_regsvr32.md",
+      "generated_sha256": "ffd2bbf443c2bd1b77b7868c08ff60ed4edbbaf0ebda626f69c539d10d5bee31"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1486",
+      "source_url": "https://attack.mitre.org/techniques/T1486",
+      "source_revision": "1.5@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1486_data_encrypted_for_impact.md",
+      "generated_sha256": "c9020e1a3278e192b67deb4b266166274efadad39b9f5e1fc91ea5fa5b426924"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1490",
+      "source_url": "https://attack.mitre.org/techniques/T1490",
+      "source_revision": "1.6@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1490_inhibit_system_recovery.md",
+      "generated_sha256": "374c4e168fe6e52ea7acb2e55cf615b2bc2177154dfdb4f4975af3769301f719"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1543.003",
+      "source_url": "https://attack.mitre.org/techniques/T1543/003",
+      "source_revision": "1.6@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1543_003_windows_service.md",
+      "generated_sha256": "6da73ad3800c5c42b3c586f84d45fdfc481d97303225f7fd2b92d7685b960fce"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1547.001",
+      "source_url": "https://attack.mitre.org/techniques/T1547/001",
+      "source_revision": "2.1@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1547_001_registry_run_keys_startup_folder.md",
+      "generated_sha256": "7cc941e39d0fdb6fa0a6ae96231dc091c4d56c45efdb9ff86db2c3e5a8ed0c1c"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1552.001",
+      "source_url": "https://attack.mitre.org/techniques/T1552/001",
+      "source_revision": "1.3@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1552_001_credentials_in_files.md",
+      "generated_sha256": "0da72812a0ad5b3a9ca5ba5eb8f7fb353dae960c05b86fa4380a45542f17e6ca"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1555",
+      "source_url": "https://attack.mitre.org/techniques/T1555",
+      "source_revision": "1.2@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1555_credentials_from_password_stores.md",
+      "generated_sha256": "7bccc386c586f56f952e15be33adaf896798e8941c51fb8ee5b618398ad4bdc9"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1560.001",
+      "source_url": "https://attack.mitre.org/techniques/T1560/001",
+      "source_revision": "1.3@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1560_001_archive_via_utility.md",
+      "generated_sha256": "175d4804a7549dc12cbe331181cc6c87bf3c005bb61641a0096af93d0926ba4f"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1566.001",
+      "source_url": "https://attack.mitre.org/techniques/T1566/001",
+      "source_revision": "2.2@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1566_001_spearphishing_attachment.md",
+      "generated_sha256": "145496125e38554d016ff139166cdabf879d9a6308b21255994cd1519a38b974"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1566.002",
+      "source_url": "https://attack.mitre.org/techniques/T1566/002",
+      "source_revision": "2.8@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1566_002_spearphishing_link.md",
+      "generated_sha256": "89746e54a725acbb842a2901dd8f207498ab10ffd37ab2860a7def9ffd950d12"
+    },
+    {
+      "source_type": "mitre_attack",
+      "external_id": "T1569.002",
+      "source_url": "https://attack.mitre.org/techniques/T1569/002",
+      "source_revision": "1.3@a6c366439ede",
+      "raw_path": "data/external/mitre/enterprise-attack.json",
+      "raw_sha256": "bdf1ce86a4e604214c5076d37ae4dcb322678afc528df8492e6fdc1b554f5da3",
+      "generated_path": "data/raw/mitre/t1569_002_service_execution.md",
+      "generated_sha256": "e30a40fa5ff8ed37f9830a4878139a7478adfd6cc2e127c814efadec6e11b854"
+    },
+    {
+      "source_type": "owasp_top10",
+      "external_id": "A01:2025",
+      "source_url": "https://github.com/OWASP/Top10/blob/839169cad15199176f462616b891a1588265cde8/2025/docs/en/A01_2025-Broken_Access_Control.md",
+      "source_revision": "2025@839169cad151",
+      "raw_path": "data/external/owasp/2025/A01_2025-Broken_Access_Control.md",
+      "raw_sha256": "d6ebc4e65422ff4fa32c310dec3c20ed6e804edfd2d06c7e5b8a802645f556ec",
+      "generated_path": "data/raw/owasp/broken_access_control.md",
+      "generated_sha256": "9c6e5dc66364e6b547b88de73937e1e49d7a557752f3365dc10ccea6fb8b4eb5"
+    },
+    {
+      "source_type": "owasp_top10",
+      "external_id": "A02:2025",
+      "source_url": "https://github.com/OWASP/Top10/blob/839169cad15199176f462616b891a1588265cde8/2025/docs/en/A02_2025-Security_Misconfiguration.md",
+      "source_revision": "2025@839169cad151",
+      "raw_path": "data/external/owasp/2025/A02_2025-Security_Misconfiguration.md",
+      "raw_sha256": "0df66f6c3e23ee8234567b20de786bf579dac1561632dd532d64130bb2aa2d75",
+      "generated_path": "data/raw/owasp/A02_2025-Security_Misconfiguration.md",
+      "generated_sha256": "75c7ac76d958fd443927653f1e42be97780c29fd9b4a63aca44e55575c2d16e7"
+    },
+    {
+      "source_type": "owasp_top10",
+      "external_id": "A03:2025",
+      "source_url": "https://github.com/OWASP/Top10/blob/839169cad15199176f462616b891a1588265cde8/2025/docs/en/A03_2025-Software_Supply_Chain_Failures.md",
+      "source_revision": "2025@839169cad151",
+      "raw_path": "data/external/owasp/2025/A03_2025-Software_Supply_Chain_Failures.md",
+      "raw_sha256": "d4108c04991ef2f5ab1d8ef301b51cfeef0fea35c550665c3dcfba7aa346758e",
+      "generated_path": "data/raw/owasp/A03_2025-Software_Supply_Chain_Failures.md",
+      "generated_sha256": "f2e7c63c32ef90fffb345decf90c062a0abaa96955c37b71946ed451340a61f5"
+    },
+    {
+      "source_type": "owasp_top10",
+      "external_id": "A04:2025",
+      "source_url": "https://github.com/OWASP/Top10/blob/839169cad15199176f462616b891a1588265cde8/2025/docs/en/A04_2025-Cryptographic_Failures.md",
+      "source_revision": "2025@839169cad151",
+      "raw_path": "data/external/owasp/2025/A04_2025-Cryptographic_Failures.md",
+      "raw_sha256": "43d7da6637dc9d7ad7d9f7a017afc36123beb96c13d4e35d986f89bca341eaad",
+      "generated_path": "data/raw/owasp/A04_2025-Cryptographic_Failures.md",
+      "generated_sha256": "aa8c45eb07cc22e77974133ccc1ed91f65292a828c464e2aac5c8df471fb4bfc"
+    },
+    {
+      "source_type": "owasp_top10",
+      "external_id": "A05:2025",
+      "source_url": "https://github.com/OWASP/Top10/blob/839169cad15199176f462616b891a1588265cde8/2025/docs/en/A05_2025-Injection.md",
+      "source_revision": "2025@839169cad151",
+      "raw_path": "data/external/owasp/2025/A05_2025-Injection.md",
+      "raw_sha256": "d617676bd8d03ab656a481d97a3e8abd2a6241f22ea10326ad05120ba07494ec",
+      "generated_path": "data/raw/owasp/A05_2025-Injection (1).md",
+      "generated_sha256": "455e86be0860c6bb13fe0550c36be7c5ddd204480b73fe41953d3d8e3305c5d5"
+    },
+    {
+      "source_type": "owasp_top10",
+      "external_id": "A06:2025",
+      "source_url": "https://github.com/OWASP/Top10/blob/839169cad15199176f462616b891a1588265cde8/2025/docs/en/A06_2025-Insecure_Design.md",
+      "source_revision": "2025@839169cad151",
+      "raw_path": "data/external/owasp/2025/A06_2025-Insecure_Design.md",
+      "raw_sha256": "e2b2f572b43ed5a4a82d2b1207c067687c321ecc683893f6bd4c2d2d467e22e4",
+      "generated_path": "data/raw/owasp/A06_2025-Insecure_Design.md",
+      "generated_sha256": "e573b28bbf749675ee3f8c6c43e5c62cde404a2cc66d4b1f10adb9e0739fcfc9"
+    },
+    {
+      "source_type": "owasp_top10",
+      "external_id": "A07:2025",
+      "source_url": "https://github.com/OWASP/Top10/blob/839169cad15199176f462616b891a1588265cde8/2025/docs/en/A07_2025-Authentication_Failures.md",
+      "source_revision": "2025@839169cad151",
+      "raw_path": "data/external/owasp/2025/A07_2025-Authentication_Failures.md",
+      "raw_sha256": "9f98e0c8f055b0c87b67078ae9af4799a9f8caf0736a3fdcd66b1b092b1c60da",
+      "generated_path": "data/raw/owasp/A07_2025-Authentication_Failures.md",
+      "generated_sha256": "e82798057704f6a08485864a54b9eb0ede27a78b18cbdd3e3934f1fa4674052a"
+    },
+    {
+      "source_type": "owasp_top10",
+      "external_id": "A08:2025",
+      "source_url": "https://github.com/OWASP/Top10/blob/839169cad15199176f462616b891a1588265cde8/2025/docs/en/A08_2025-Software_or_Data_Integrity_Failures.md",
+      "source_revision": "2025@839169cad151",
+      "raw_path": "data/external/owasp/2025/A08_2025-Software_or_Data_Integrity_Failures.md",
+      "raw_sha256": "3739748e2cb72c3935dbab9236ac5cb5061da39a1891362369af0c27102a26ca",
+      "generated_path": "data/raw/owasp/A08_2025-Software_or_Data_Integrity_Failures.md",
+      "generated_sha256": "5211ff9d2b8bc87870abf1224c634cf2cd7e7668901d024ce6ac34ca23382ea5"
+    },
+    {
+      "source_type": "owasp_top10",
+      "external_id": "A09:2025",
+      "source_url": "https://github.com/OWASP/Top10/blob/839169cad15199176f462616b891a1588265cde8/2025/docs/en/A09_2025-Security_Logging_and_Alerting_Failures.md",
+      "source_revision": "2025@839169cad151",
+      "raw_path": "data/external/owasp/2025/A09_2025-Security_Logging_and_Alerting_Failures.md",
+      "raw_sha256": "87121126d307ea09dbf073b090609c861c9ded6dc654f73c5ea6436b9522e9c8",
+      "generated_path": "data/raw/owasp/A09_2025-Security_Logging_and_Alerting_Failures.md",
+      "generated_sha256": "eb3e6555c771b1f38df44d29dcaad0a49aa21a03d297f2df73ccf257dabfd340"
+    },
+    {
+      "source_type": "owasp_top10",
+      "external_id": "A10:2025",
+      "source_url": "https://github.com/OWASP/Top10/blob/839169cad15199176f462616b891a1588265cde8/2025/docs/en/A10_2025-Mishandling_of_Exceptional_Conditions.md",
+      "source_revision": "2025@839169cad151",
+      "raw_path": "data/external/owasp/2025/A10_2025-Mishandling_of_Exceptional_Conditions.md",
+      "raw_sha256": "1e05837530582feb3e96d84160cd2286d5ba93348fedca2d8f8fb35eecc27ac4",
+      "generated_path": "data/raw/owasp/A10_2025-Mishandling_of_Exceptional_Conditions.md",
+      "generated_sha256": "2394fff8ac76999c2500a57d138646ff2d3b7be307cff78029a81fbdc3247101"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "058f4380-962d-40a5-afce-50207d36d7e2",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_execution_patterns.yml",
+      "source_revision": "2023-11-06@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_execution_patterns.yml",
+      "raw_sha256": "2fd0b402ad197e0525ee2d61628033b3eeddb0d2556369f75f284ebe59cfb829",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_hktl_crackmapexec_execution_patterns.md",
+      "generated_sha256": "4afcb777727386a7e6630b76ae8848b8d012d95fabd37cad247f581f252fc561"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "07837ab9-60e1-481f-a74d-c31fb496a94c",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/network_connection/net_connection_win_domain_portmap.yml",
+      "source_revision": "2024-05-31@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/network_connection/net_connection_win_domain_portmap.yml",
+      "raw_sha256": "0ee49ec4ca23763042f31f2b8bad10dbb73dcdf12740b269b9a5c7e2d4881e8d",
+      "generated_path": "data/raw/sources/sigma/net_connection_win_domain_portmap.md",
+      "generated_sha256": "de367dbe894e13881a34a6af1d2ebaa384d61789e0ddee7db1ddc29e2ce0087c"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "0a1f9d29-6465-4776-b091-7f43b26e4c89",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/file/file_delete/file_delete_win_delete_prefetch.yml",
+      "source_revision": "2024-01-25@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/file/file_delete/file_delete_win_delete_prefetch.yml",
+      "raw_sha256": "5cd9537b3b3c8cbd5c84fef26e8eb6c46bba6bea615224eb557291d8667db071",
+      "generated_path": "data/raw/sources/sigma/file_delete_win_delete_prefetch.md",
+      "generated_sha256": "974e4a163397cc1e31f7040a5262ce7188d39ad16c50321ba3b4ef26cb170035"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "10c14723-61c7-4c75-92ca-9af245723ad2",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_hktl_impacket_lateral_movement.yml",
+      "source_revision": "2023-02-21@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_hktl_impacket_lateral_movement.yml",
+      "raw_sha256": "7cbff6f540a01c19a171e61cd3b15088eced4bd78018df83447cb97242017828",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_hktl_impacket_lateral_movement.md",
+      "generated_sha256": "ec85f788fe3620070dae175e161062490c209a2c80e9b67f35d181b559d9c1d3"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "1cdd9a09-06c9-4769-99ff-626e2b3991b8",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_susp_double_extension.yml",
+      "source_revision": "2025-05-30@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_susp_double_extension.yml",
+      "raw_sha256": "4b3d531bd692a9f085fd2bada8d714a7a510c262dd5610b6f917f7b209da8115",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_susp_double_extension.md",
+      "generated_sha256": "fd41e104e4f6e9ac7d9c608fbb2aeb4f773fb7d051da1171c280c8c0bacdf6fb"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "1de68c67-af5c-4097-9c85-fe5578e09e67",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/security/win_security_mal_wceaux_dll.yml",
+      "source_revision": "2025-01-30@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/security/win_security_mal_wceaux_dll.yml",
+      "raw_sha256": "2327964b227ba200b16f819e13e33eba999ea709e1b1d6801223a143f6fb31a6",
+      "generated_path": "data/raw/sources/sigma/win_security_mal_wceaux_dll.md",
+      "generated_sha256": "8ea5cd16a9833747d738dce517e312783637717cf809de0cdc22fa0aaefb9453"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "208748f7-881d-47ac-a29c-07ea84bf691d",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml",
+      "source_revision": "2023-02-04@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_office_outlook_susp_child_processes.yml",
+      "raw_sha256": "e29b56538de711aa8b082c6ffbe263dc39b2d839098eab4122c3d970e7c3890e",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_office_outlook_susp_child_processes.md",
+      "generated_sha256": "b1e563db7c3d106faf7155d5c3359b0788ead3d5e95de84d34d2c15b652e24ca"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "24549159-ac1b-479c-8175-d42aea947cae",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/security/win_security_alert_ruler.yml",
+      "source_revision": "2022-10-09@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/security/win_security_alert_ruler.yml",
+      "raw_sha256": "2774e1d5a0c418a3eceab1de94107ef740df79b212a0ca37159bacb22ca0fdbd",
+      "generated_path": "data/raw/sources/sigma/win_security_alert_ruler.md",
+      "generated_sha256": "0a53ef296cd9723f077e5667765db8b849cf22d3f0d6c5eb818a441c6d85f31a"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "25b9c01c-350d-4b95-bed1-836d04a4f324",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/system/service_control_manager/win_system_moriya_rootkit.yml",
+      "source_revision": "2022-11-29@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/system/service_control_manager/win_system_moriya_rootkit.yml",
+      "raw_sha256": "5d3e1051faf7112c63abd32ce32c9762d4e698cab3719ab4756a62bf807623c4",
+      "generated_path": "data/raw/sources/sigma/win_system_moriya_rootkit.md",
+      "generated_sha256": "347d940a79f4a6c726086544f62b2a495c0796fadb04881a7bfe71d59731aab0"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "28208707-fe31-437f-9a7f-4b1108b94d2e",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/file/file_event/file_event_win_susp_startup_folder_persistence.yml",
+      "source_revision": "2025-10-12@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/file/file_event/file_event_win_susp_startup_folder_persistence.yml",
+      "raw_sha256": "f9dae1cc14c5541b5512559e278c56d4b36ae288b263741ba694b316c814ebd8",
+      "generated_path": "data/raw/sources/sigma/file_event_win_susp_startup_folder_persistence.md",
+      "generated_sha256": "087b4585233311e8c32af4c53e3ef9ffdf09219063e16f3afe116a7cd863f053"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "2dd2c217-bf68-437a-b57c-fe9fd01d5de8",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_regsvr32_http_ip_pattern.yml",
+      "source_revision": "2023-05-24@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_regsvr32_http_ip_pattern.yml",
+      "raw_sha256": "5ed0c24908eb092479cb93eecc3dc212e5c1b5a573d74b18a8322d86e8eae771",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_regsvr32_http_ip_pattern.md",
+      "generated_sha256": "eb160677b61ef94ce9f0f4e6b263ff66c49ff7d154f4af7f70453322215efbdd"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "2f7979ae-f82b-45af-ac1d-2b10e93b0baa",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/file/file_event/file_event_win_dcom_iertutil_dll_hijack.yml",
+      "source_revision": "2022-12-18@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/file/file_event/file_event_win_dcom_iertutil_dll_hijack.yml",
+      "raw_sha256": "5e8dbb71572d0fe8895278089fb8efa76f505830dcf8f3cc2328c283876301e3",
+      "generated_path": "data/raw/sources/sigma/file_event_win_dcom_iertutil_dll_hijack.md",
+      "generated_sha256": "597bff5b9ec2f13073c3d14dc60a82850e8b2d10e0f206f789b81bb08bf02dda"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "318557a5-150c-4c8d-b70e-a9910e199857",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/file/file_event/file_event_win_msdt_susp_directories.yml",
+      "source_revision": "2023-02-23@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/file/file_event/file_event_win_msdt_susp_directories.yml",
+      "raw_sha256": "b593ddd00c3c3314c1b3603ddd40183175b373ff6f6170408dd99c85886ba3b7",
+      "generated_path": "data/raw/sources/sigma/file_event_win_msdt_susp_directories.md",
+      "generated_sha256": "86ce6ffca707ed267cbb13ed6cdff9fed33669f2c725fcc8ccd28cc6059d8cb1"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "37e4024a-6c80-4d8f-b95d-2e7e94f3a8d1",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/network_connection/net_connection_win_dialer_initiated_connection.yml",
+      "source_revision": "2024-04-26@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/network_connection/net_connection_win_dialer_initiated_connection.yml",
+      "raw_sha256": "9c13969b70c3bb98c5b6d722d491df90053e5eb685957bcc183b68e48d243f8f",
+      "generated_path": "data/raw/sources/sigma/net_connection_win_dialer_initiated_connection.md",
+      "generated_sha256": "8520758433601082d970ade25eb3f75b66da696d04a0cd52b82d639ac38aebe6"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "38e7f511-3f74-41d4-836e-f57dfa18eead",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/cloud/aws/cloudtrail/aws_cloudtrail_ssm_malicious_usage.yml",
+      "source_revision": "2025-12-08@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/cloud/aws/cloudtrail/aws_cloudtrail_ssm_malicious_usage.yml",
+      "raw_sha256": "3d394a4a27a2af7c93034177c376f0358e13b29999074dda031334b7c92b2cc9",
+      "generated_path": "data/raw/sources/sigma/aws_cloudtrail_ssm_malicious_usage.md",
+      "generated_sha256": "c990dc3f22bb0fa959bf695d8f9d1798882fa2935471a53ee1af8b630e6446fa"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "3a734d25-df5c-4b99-8034-af1ddb5883a4",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/security/win_security_susp_scheduled_task_creation.yml",
+      "source_revision": "2022-12-07@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/security/win_security_susp_scheduled_task_creation.yml",
+      "raw_sha256": "0351c4d3781057a81e1312fb947d27d18685b4683e6a4ff473e23b5a0df34888",
+      "generated_path": "data/raw/sources/sigma/win_security_susp_scheduled_task_creation.md",
+      "generated_sha256": "66b2c32ec130f47c7685572a544ad1087618045abe51a0bfd4f250c077c460c2"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "42a993dd-bb3e-48c8-b372-4d6684c4106c",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_execution.yml",
+      "source_revision": "2023-03-08@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_hktl_crackmapexec_execution.yml",
+      "raw_sha256": "cd0fb11145f5760d4098bc792433caf538d351e6296fea2af6761d37e938f33e",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_hktl_crackmapexec_execution.md",
+      "generated_sha256": "757533c4deefe7c99f0a8901a10410a264b979e2e9126de71fef001044f1c6e3"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "51e33403-2a37-4d66-a574-1fda1782cc31",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/security/account_management/win_security_rdp_localhost_login.yml",
+      "source_revision": "2022-10-09@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/security/account_management/win_security_rdp_localhost_login.yml",
+      "raw_sha256": "c68da48f26841d8eddfe7bc1322c9251092afb75531ae4cd4c4891a1358ad33a",
+      "generated_path": "data/raw/sources/sigma/win_security_rdp_localhost_login.md",
+      "generated_sha256": "d3abdc4416f81d1617ef30ef86f779248cf48e4eb4cccf5b4abc2090358bc471"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "52cad028-0ff0-4854-8f67-d25dfcbc78b4",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_hh_html_help_susp_child_process.yml",
+      "source_revision": "2023-04-12@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_hh_html_help_susp_child_process.yml",
+      "raw_sha256": "4cb721eccb6e2a63e399b6a54b687ddc739985dbcc0d525fa6f9fb534dd8cd72",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_hh_html_help_susp_child_process.md",
+      "generated_sha256": "922ab571111b67afc90514b9fa1dac94ccf96d130b4be31fd2e9844669de13c9"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "54f0434b-726f-48a1-b2aa-067df14516e4",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/security/win_security_susp_opened_encrypted_zip_filename.yml",
+      "source_revision": "2022-05-09@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/security/win_security_susp_opened_encrypted_zip_filename.yml",
+      "raw_sha256": "e64115bc39b3703e470cc0ef98f578824d4cf3a756d46606dbf7bae8ee7e1268",
+      "generated_path": "data/raw/sources/sigma/win_security_susp_opened_encrypted_zip_filename.md",
+      "generated_sha256": "0ac5964d315688e44f72b3d7aee6e98ce642070196cc38510cecf6cfb4823b22"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "571498c8-908e-40b4-910b-d2369159a3da",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/security/win_security_susp_opened_encrypted_zip_outlook.yml",
+      "source_revision": "2022-05-09@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/security/win_security_susp_opened_encrypted_zip_outlook.yml",
+      "raw_sha256": "387d889a49e08a74061b0e6f6a09f534683f7a0f8f28ef203a3b54719f242ff0",
+      "generated_path": "data/raw/sources/sigma/win_security_susp_opened_encrypted_zip_outlook.md",
+      "generated_sha256": "bb16c851cb738dc4fc27607372bea4c2836160ee9c9f69a285aa641f91ba966f"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "5a105d34-05fc-401e-8553-272b45c1522d",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/system/service_control_manager/win_system_cobaltstrike_service_installs.yml",
+      "source_revision": "2022-11-27@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/system/service_control_manager/win_system_cobaltstrike_service_installs.yml",
+      "raw_sha256": "72c28ec5eb960dea4598cc421487121b84b42b8a6a4842b94daa4f897b26624a",
+      "generated_path": "data/raw/sources/sigma/win_system_cobaltstrike_service_installs.md",
+      "generated_sha256": "5d1ff3fcb39b90f118f8a2fbed815129e0671e0735298cda6507575ca117f030"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "5b768e71-86f2-4879-b448-81061cbae951",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_net_user_default_accounts_manipulation.yml",
+      "source_revision": "2023-02-21@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_net_user_default_accounts_manipulation.yml",
+      "raw_sha256": "a2d722d2b488bc3b8ddd6746f66687a3ee7d08fd7f41e99bccbcc4334b6cc363",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_net_user_default_accounts_manipulation.md",
+      "generated_sha256": "274a4d2fbcea0a78a73e44915ba00f6d56b8f16690a1d5fc988a902d0cde2c69"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "5bed80b6-b3e8-428e-a3ae-d3c757589e41",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/security/win_security_rdp_reverse_tunnel.yml",
+      "source_revision": "2022-09-02@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/security/win_security_rdp_reverse_tunnel.yml",
+      "raw_sha256": "7b01c815569a784103ee36e81762bccb6f16c58199e8e9054739d40aad38d90a",
+      "generated_path": "data/raw/sources/sigma/win_security_rdp_reverse_tunnel.md",
+      "generated_sha256": "05eec83895f0dc7c76dab127d92a3385a5a3b63ba4b63f8613df337ffb8c6eed"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "62510e69-616b-4078-b371-847da438cc03",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_net_view_share_and_sessions_enum.yml",
+      "source_revision": "2023-02-21@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_net_view_share_and_sessions_enum.yml",
+      "raw_sha256": "46d7533fce00b99829f510a7b9f464315b6b1bf1316c951e016cf8cd54200a1f",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_net_view_share_and_sessions_enum.md",
+      "generated_sha256": "79595883ee2a902529984b1b5763e3a1b7ca646fbfe5e7db49787f051f117c4c"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "6e4dcdd1-e48b-42f7-b2d8-3b413fc58cb4",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/macos/process_creation/proc_creation_macos_susp_execution_macos_script_editor.yml",
+      "source_revision": "2022-12-28@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/macos/process_creation/proc_creation_macos_susp_execution_macos_script_editor.yml",
+      "raw_sha256": "0cf77b055a8a63cda09f474f01515ff8c1803e00f2b4eadeeb53988144be3402",
+      "generated_path": "data/raw/sources/sigma/proc_creation_macos_susp_execution_macos_script_editor.md",
+      "generated_sha256": "79e9d98e9ca3ab366ab19c2770814de2e5c499f2041a1b20cc0392ba5a063439"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "6ea858a8-ba71-4a12-b2cc-5d83312404c7",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/file/file_event/file_event_win_hktl_hivenightmare_file_exports.yml",
+      "source_revision": "2024-06-27@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/file/file_event/file_event_win_hktl_hivenightmare_file_exports.yml",
+      "raw_sha256": "b538dbf6c485ce5902aad84e469956568e09df62b92b49152d5bfe8cd41cad01",
+      "generated_path": "data/raw/sources/sigma/file_event_win_hktl_hivenightmare_file_exports.md",
+      "generated_sha256": "c3cfc626e9a1429a3ed837ebfa728d3f2738688798dde57d9fb9cafb46c41337"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "7124aebe-4cd7-4ccb-8df0-6d6b93c96795",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_dtrace_kernel_dump.yml",
+      "source_revision": "2021-12-28@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_dtrace_kernel_dump.yml",
+      "raw_sha256": "eb5b30c19f08b8c7b518ab12672403b41df8ab3c88da06b435d75c4833caf961",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_dtrace_kernel_dump.md",
+      "generated_sha256": "e07411dfad8c4ea1ae3a5d91baf2b284bb25846248e9d22b952ca0d02085feda"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "7679d464-4f74-45e2-9e01-ac66c5eb041a",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_hktl_secutyxploded.yml",
+      "source_revision": "2023-02-04@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_hktl_secutyxploded.yml",
+      "raw_sha256": "616cfbda2691a7e23d534547f4c28468607aa8accd4378130646732808f1054b",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_hktl_secutyxploded.md",
+      "generated_sha256": "2980fcd6ab10d3c2abe7e853c31e73ec7071f83180db93451003a26be8f59b81"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "7892ec59-c5bb-496d-8968-e5d210ca3ac4",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/file/file_event/file_event_win_susp_dpapi_backup_and_cert_export_ioc.yml",
+      "source_revision": "2024-06-26@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/file/file_event/file_event_win_susp_dpapi_backup_and_cert_export_ioc.yml",
+      "raw_sha256": "bec6c923fbe86633b86a0d4a3d65606d123ead6e6e891f042d63ef3e779230d7",
+      "generated_path": "data/raw/sources/sigma/file_event_win_susp_dpapi_backup_and_cert_export_ioc.md",
+      "generated_sha256": "1410a177d6d61d41476bd4c7a49edc32b2c141bdf0279b37e5ff8a3fa1fcc5ef"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "78d5cab4-557e-454f-9fb9-a222bd0d5edc",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/security/account_management/win_security_successful_external_remote_smb_login.yml",
+      "source_revision": "2024-03-11@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/security/account_management/win_security_successful_external_remote_smb_login.yml",
+      "raw_sha256": "3cfdd25fc8490d0eb062a7782b653102c44e201e35d50b6cdb85f55847db9d59",
+      "generated_path": "data/raw/sources/sigma/win_security_successful_external_remote_smb_login.md",
+      "generated_sha256": "65b821b5334c0e959994fcdbb72ea41b594619a1de53d5a8de32873c32db156e"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "79f4ede3-402e-41c8-bc3e-ebbf5f162581",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_hktl_empire_powershell_launch.yml",
+      "source_revision": "2023-02-21@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_hktl_empire_powershell_launch.yml",
+      "raw_sha256": "c07f78a61ca91483c50399e74bab4793f5d5d49e872c413c62fe3e728cc17806",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_hktl_empire_powershell_launch.md",
+      "generated_sha256": "7cb1ba1cb32980c8fbf067151acfe4028acef382da7abab379c086cadbc85eca"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "7d0d0329-0ef1-4e84-a9f5-49500f9d7c6c",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/powershell/powershell_module/posh_pm_malicious_commandlets.yml",
+      "source_revision": "2025-12-10@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/powershell/powershell_module/posh_pm_malicious_commandlets.yml",
+      "raw_sha256": "984dfcdf7c0779be85143bd9ec73a6f13dc087a14a83e76822eaef1b9db700b2",
+      "generated_path": "data/raw/sources/sigma/posh_pm_malicious_commandlets.md",
+      "generated_sha256": "23a6917132e5cd2fe81977a63cf330c92236b3a1755bc0b15f1e01f3fd0cd1ac"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "7ec2c172-dceb-4c10-92c9-87c1881b7e18",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_hktl_rubeus.yml",
+      "source_revision": "2023-04-20@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_hktl_rubeus.yml",
+      "raw_sha256": "47558b7a25f2292e1371f32c41d380f723a7e15efafa402b3103defbf9e16c29",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_hktl_rubeus.md",
+      "generated_sha256": "f8ab6f7a20d1cf20cd55885fbfb0c9b232502a3ba95c9a9467b8dfde7686d166"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "851fd622-b675-4d26-b803-14bc7baa517a",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/powershell/powershell_script/posh_ps_hktl_winpwn.yml",
+      "source_revision": "2023-12-04@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/powershell/powershell_script/posh_ps_hktl_winpwn.yml",
+      "raw_sha256": "03d44d784336023722696eb30cfff90fb7e642436b4725635c1039c0612cc55c",
+      "generated_path": "data/raw/sources/sigma/posh_ps_hktl_winpwn.md",
+      "generated_sha256": "81debbcab57b1b970497e5704a51f35e1e6d90af4fdd8487a065d3c96af737a7"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "867356ee-9352-41c9-a8f2-1be690d78216",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_regsvr32_network_pattern.yml",
+      "source_revision": "2023-05-26@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_regsvr32_network_pattern.yml",
+      "raw_sha256": "d7fca474580984f4e629177ae65531c3814371a1eca43c33bd542567bcba2550",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_regsvr32_network_pattern.md",
+      "generated_sha256": "fd918be716d0fd2b5fe72410abf90086f227b9c4a12272dd2963d47c42aa20ac"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "87df9ee1-5416-453a-8a08-e8d4a51e9ce1",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/powershell/powershell_classic/posh_pc_delete_volume_shadow_copies.yml",
+      "source_revision": "2023-10-27@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/powershell/powershell_classic/posh_pc_delete_volume_shadow_copies.yml",
+      "raw_sha256": "a841dc84cc7af91787733b09ae05cb04dc0d456782bbba067d8f443092c1fecf",
+      "generated_path": "data/raw/sources/sigma/posh_pc_delete_volume_shadow_copies.md",
+      "generated_sha256": "065f07a19ac86c3b0127469bc7c09d4680ee12f4eafd72757cfd7028be4ef0c1"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "8a3038e8-9c9d-46f8-b184-66234a160f6f",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_susp_remote_desktop_tunneling.yml",
+      "source_revision": "2022-09-27@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_susp_remote_desktop_tunneling.yml",
+      "raw_sha256": "6678da3459cfe3c2b533182639abf43df4ee33d1f3d4c23a01e61362c0378460",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_susp_remote_desktop_tunneling.md",
+      "generated_sha256": "a5facc1d1cfc3d45d75195c345ffd232c6dddbf01053fcdf1ba47fba6c388777"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "92fa78e7-4d39-45f1-91a3-8b23f3f1088d",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/file/file_event/file_event_win_powershell_startup_shortcuts.yml",
+      "source_revision": "2023-02-23@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/file/file_event/file_event_win_powershell_startup_shortcuts.yml",
+      "raw_sha256": "a93b60d73aebb42693e7441de309350017a57cbbd5ddf7f79ebb57c14c7ad266",
+      "generated_path": "data/raw/sources/sigma/file_event_win_powershell_startup_shortcuts.md",
+      "generated_sha256": "234f14ffff16250934c78ac0ac805c6d687998f1c1bcfb128ac56eee681b1b19"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "9a132afa-654e-11eb-ae93-0242ac130002",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_pua_adfind_susp_usage.yml",
+      "source_revision": "2025-10-24@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_pua_adfind_susp_usage.yml",
+      "raw_sha256": "52d4dcc47c3a9ef607281ac874d6068aced8c5e1a7650a2fa76bc6875e13372c",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_pua_adfind_susp_usage.md",
+      "generated_sha256": "f11207c78e5666362cc51bd57576aec9119d95c8ae2d922154f692dc7acf40f2"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "9bd04a79-dabe-4f1f-a5ff-92430265c96b",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_susp_priv_escalation_via_named_pipe.yml",
+      "source_revision": "2022-12-30@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_susp_priv_escalation_via_named_pipe.yml",
+      "raw_sha256": "25e5d4b149814d1b7fe79d25fd9837edda1b8708b0df3e6c708a62607801fcd9",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_susp_priv_escalation_via_named_pipe.md",
+      "generated_sha256": "5164deea3d4b5c2a4e9660cc93efbd777eb61b0a295569164e5e742ed4fe0c74"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "a018fdc3-46a3-44e5-9afb-2cd4af1d4b39",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_office_outlook_execution_from_temp.yml",
+      "source_revision": "2022-10-09@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_office_outlook_execution_from_temp.yml",
+      "raw_sha256": "0a3f93739a8da449750e56943bd8bfdc590a18a658e4c7807534e9d4bdda3291",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_office_outlook_execution_from_temp.md",
+      "generated_sha256": "b677694b148e8252174d766277d3e07d474ac2bdc7ab0d2d9e745ec3f0745166"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "a8f29a7b-b137-4446-80a0-b804272f3da2",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/security/win_security_gpo_scheduledtasks.yml",
+      "source_revision": "2024-09-04@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/security/win_security_gpo_scheduledtasks.yml",
+      "raw_sha256": "e95a747bea74cb024ce0dd302dbc1c35d5a926f242d0f546d566557881234fb1",
+      "generated_path": "data/raw/sources/sigma/win_security_gpo_scheduledtasks.md",
+      "generated_sha256": "c6bcbf2fdb4b55251961693fe165612e374a3f7288091a779434df3574bd1910"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "aa35a627-33fb-4d04-a165-d33b4afca3e8",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_access/proc_access_win_lsass_remote_access_trough_winrm.yml",
+      "source_revision": "2023-11-29@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_access/proc_access_win_lsass_remote_access_trough_winrm.yml",
+      "raw_sha256": "b4a9bbf215e5f903f668819aaa546b1a9ee8257332eeae94fad63d9d4d454c42",
+      "generated_path": "data/raw/sources/sigma/proc_access_win_lsass_remote_access_trough_winrm.md",
+      "generated_sha256": "8a44cb13c2c03b56276e1af1b8b6d7a63b76fba9a17161817d1b0a717dfffefc"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "b236190c-1c61-41e9-84b3-3fe03f6d76b0",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_regsvr32_flags_anomaly.yml",
+      "source_revision": "2024-03-13@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_regsvr32_flags_anomaly.yml",
+      "raw_sha256": "e4b145388b2a3a82f22f41ddd6bb507c93ee75e8c4f1d977797af1ff7b970f8c",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_regsvr32_flags_anomaly.md",
+      "generated_sha256": "eff1e400ae9cddd405ad729ff7323e8e2f79a6f6eec64a0f7de736af65e6463d"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "b48492dc-c5ef-4572-8dff-32bc241c15c8",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/image_load/image_load_dll_rstrtmgr_suspicious_load.yml",
+      "source_revision": "2023-11-28@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/image_load/image_load_dll_rstrtmgr_suspicious_load.yml",
+      "raw_sha256": "255bdf1c371a289bd35225247957ac34b58ccc3de5e10d63876665575c464301",
+      "generated_path": "data/raw/sources/sigma/image_load_dll_rstrtmgr_suspicious_load.md",
+      "generated_sha256": "bfeeba2f6f7db180fe2c05dcdf9a6dc5a5bf08764a1fc956de4cdb3993a11197"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "c484e533-ee16-4a93-b6ac-f0ea4868b2f1",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_hktl_sharpup.yml",
+      "source_revision": "2023-02-13@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_hktl_sharpup.yml",
+      "raw_sha256": "c75bf5e882dca393453b900af21842c002518eaba4889c664343105afeeaf4f1",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_hktl_sharpup.md",
+      "generated_sha256": "af7daf03d36c842f645b7a475014868a128fbfb208f3f5168acbafd828b11b0e"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "c4ff1eac-84ad-44dd-a6fb-d56a92fc43a9",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/system/service_control_manager/win_system_service_install_pua_proceshacker.yml",
+      "source_revision": "2022-12-25@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/system/service_control_manager/win_system_service_install_pua_proceshacker.yml",
+      "raw_sha256": "9865ed1c26fe02255afc8813eb9c4ae4bacbca8ea72f03344db0a8bc88c85e7d",
+      "generated_path": "data/raw/sources/sigma/win_system_service_install_pua_proceshacker.md",
+      "generated_sha256": "0a41bf6be18ae6d8e396355c5f99eaa0f8d270a3f85c95670d25a2a5fc68ac50"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "c7a74c80-ba5a-486e-9974-ab9e682bc5e4",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/file/file_event/file_event_win_office_susp_file_extension.yml",
+      "source_revision": "2025-10-17@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/file/file_event/file_event_win_office_susp_file_extension.yml",
+      "raw_sha256": "558f11b81947f1e232e4193527434fb89664c1ce597781e974952b05fcfd5849",
+      "generated_path": "data/raw/sources/sigma/file_event_win_office_susp_file_extension.md",
+      "generated_sha256": "4f84d0a3f6a779bf76d55064664a82bafa0ea626fc1b4d61947a8508de30b3f3"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "c8da0dfd-4ed0-4b68-962d-13c9c884384e",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_lsass_process_clone.yml",
+      "source_revision": "2023-03-02@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_lsass_process_clone.yml",
+      "raw_sha256": "74982f215f0649b319eec4f43d1d6c4e613dd9465e1ecea727124011c78347a0",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_lsass_process_clone.md",
+      "generated_sha256": "daa801b1146f0cc4348609f75ecf10189dfa53a0c225ad0d1fe957f4a79b7195"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "ccb5742c-c248-4982-8c5c-5571b9275ad3",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_findstr_recon_pipe_output.yml",
+      "source_revision": "2025-10-08@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_findstr_recon_pipe_output.yml",
+      "raw_sha256": "7dbffbfce7eb80aab5c87dd87f9dfde9a20b69b51a391ac5081de0b189b7d480",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_findstr_recon_pipe_output.md",
+      "generated_sha256": "2b717029c6e945a38f1a2daa196bf14dcdde9fc2d94eafe40cad2769785d1a7b"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "d557dc06-62e8-4468-a8e8-7984124908ce",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_hktl_winpwn.yml",
+      "source_revision": "2023-12-04@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_hktl_winpwn.yml",
+      "raw_sha256": "b6b608fd792275933eaefcd3782186f69b7e37c5487e1b07efd419afd835fdf0",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_hktl_winpwn.md",
+      "generated_sha256": "19730059a66f44b6e76caca5da893b8373f24cdd6bb1508f39560f7e3181d70d"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "d7a95147-145f-4678-b85d-d1ff4a3bb3f6",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/builtin/security/win_security_cobaltstrike_service_installs.yml",
+      "source_revision": "2022-11-27@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/builtin/security/win_security_cobaltstrike_service_installs.yml",
+      "raw_sha256": "6e5a67db862c48342750e76203ee45dced8b802462bed83da6df944ed39e7697",
+      "generated_path": "data/raw/sources/sigma/win_security_cobaltstrike_service_installs.md",
+      "generated_sha256": "d2a52557bb281ddf4b7df4989fc870d114d63264ea51d5bdbc4f83dec1ecb259"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "e31033fc-33f0-4020-9a16-faf9b31cbf08",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_pua_netcat.yml",
+      "source_revision": "2023-02-08@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_pua_netcat.yml",
+      "raw_sha256": "ed510e9dba1b4f4bf17d6e71282783006c71f5401611e4c8c7d894f696bb4f31",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_pua_netcat.md",
+      "generated_sha256": "059bb294d48ba4293ac95814ebed799c74f06dd7fb813e3d7700eab43eec2b53"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "edc2f8ae-2412-4dfd-b9d5-0c57727e70be",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_powershell_reverse_shell_connection.yml",
+      "source_revision": "2023-04-05@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_powershell_reverse_shell_connection.yml",
+      "raw_sha256": "1346f2094b01eb7de8daf67e1600a7e4ce165e8f5254027d969ef8dcb8946a27",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_powershell_reverse_shell_connection.md",
+      "generated_sha256": "fcecc09cfd4d44c892bad855f8727aea88d4fe4e1256d7d308f7fc7cf9c8e7c5"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "f239b326-2f41-4d6b-9dfa-c846a60ef505",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/create_remote_thread/create_remote_thread_win_susp_password_dumper_lsass.yml",
+      "source_revision": "2021-06-21@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/create_remote_thread/create_remote_thread_win_susp_password_dumper_lsass.yml",
+      "raw_sha256": "edd8de9c4c4a509db4fe379624cd4badc34cfe6aeb305196f9d429ac8cbd24fd",
+      "generated_path": "data/raw/sources/sigma/create_remote_thread_win_susp_password_dumper_lsass.md",
+      "generated_sha256": "ec4a16f58a7d027cd4d39d8512b2c0576afbf18dd963db91d3b51be8b797339b"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "f8be3e82-46a3-4e4e-ada5-8e538ae8b9c9",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_access/proc_access_win_lsass_python_based_tool.yml",
+      "source_revision": "2023-11-29@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_access/proc_access_win_lsass_python_based_tool.yml",
+      "raw_sha256": "2ab74b2409374cfb9b6c340b099083ffa01805847a6aa9ce8e169e891bf2f62a",
+      "generated_path": "data/raw/sources/sigma/proc_access_win_lsass_python_based_tool.md",
+      "generated_sha256": "145b1d4bcdbf8899ef4564769b9b6317e500d1d5eeca2d2594ef6da35c43d223"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "fc4f4817-0c53-4683-a4ee-b17a64bc1039",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/file/file_event/file_event_win_susp_desktopimgdownldr_file.yml",
+      "source_revision": "2022-06-02@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/file/file_event/file_event_win_susp_desktopimgdownldr_file.yml",
+      "raw_sha256": "737a364c9839d5fa8e48ba934283566a86502f868df0869558f90804bdb48d9e",
+      "generated_path": "data/raw/sources/sigma/file_event_win_susp_desktopimgdownldr_file.md",
+      "generated_sha256": "192095f35e8d3a673317eb27f75b41d1a8b343705dc5e8865af9280c12f37a13"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "fca949cc-79ca-446e-8064-01aa7e52ece5",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_hktl_pchunter.yml",
+      "source_revision": "2024-11-23@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_hktl_pchunter.yml",
+      "raw_sha256": "c017c7f9b000c23c67c32d7c6a8d3ae7403983ad8e266b9d2b14cf79dd0a1a09",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_hktl_pchunter.md",
+      "generated_sha256": "4e493f8ae8fc466728144f150b82425f0ed0c7cdd7053e9d80fb4d6510f9f6f9"
+    },
+    {
+      "source_type": "sigma_rule",
+      "external_id": "ffa6861c-4461-4f59-8a41-578c39f3f23e",
+      "source_url": "https://github.com/SigmaHQ/sigma/blob/f321ac84b7cb0c1e688bb1a6415d0bf73d767d1d/rules/windows/process_creation/proc_creation_win_susp_lsass_dmp_cli_keywords.yml",
+      "source_revision": "2023-08-29@f321ac84b7cb",
+      "raw_path": "data/external/sigma/rules/windows/process_creation/proc_creation_win_susp_lsass_dmp_cli_keywords.yml",
+      "raw_sha256": "c2e2e6b1875339e71fe45c72754dbe299b34bb32ec14e74647b43555f460fd83",
+      "generated_path": "data/raw/sources/sigma/proc_creation_win_susp_lsass_dmp_cli_keywords.md",
+      "generated_sha256": "ae80c3e00c19bf2cfd2501d976b61b9c6af2c4935779f58be3c89d9300064409"
+    }
+  ]
+}

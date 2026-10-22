@@ -1,0 +1,2356 @@
+{
+  "summary": {
+    "total_questions": 30,
+    "top_k": 5,
+    "hit_at_k": 0.7666666666666667,
+    "recall_at_k": 0.6611111111111111,
+    "mrr": 0.6244444444444445,
+    "average_latency_ms": 118.9,
+    "answer_has_sources_rate": 1.0,
+    "no_answer_rate": 0.0
+  },
+  "results": [
+    {
+      "question_id": "q001",
+      "question": "Что должен проверить аналитик при подозрении на phishing-письмо?",
+      "language": "ru",
+      "tags": [
+        "phishing",
+        "soc",
+        "email"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 616,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "phishing",
+        "SPF",
+        "DKIM",
+        "DMARC"
+      ],
+      "expected_source_keywords": [
+        "phishing",
+        "SPF",
+        "DKIM",
+        "DMARC"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Первичный разбор phishing-инцидента ## Проверка ссылок При анализе ссылок нужно: - извлечь все URL из письма; - проверить видимый текст ссылки и фактический адрес; - обратить внимание на сокращатели ссылок; - проверить домены на сходство с легитимными; - проверить URL в threat intelligence источниках; - не открывать ссылку напрямую с рабочей машины. Подозрительными считаются ссылки, которые ведут на страницы ввода пароля, формы авторизации, неизвестные домены или недавно зарегистрированные домены. [1]\n2. # Runbook: Первичный разбор phishing-инцидента ## Признаки высокого риска Инцидент следует считать высокорисковым, если: - пользователь ввёл пароль на подозрительном сайте; - пользователь запустил вложение; - письмо содержит вредоносный файл; - ссылка ведёт на фишинговую страницу входа; - письмо отправлено многим сотрудникам; - письмо имитирует внутренний сервис организации; - обнаружены признаки компрометации учётной записи. [2]\n3. # Runbook: Первичный разбор phishing-инцидента ## Рекомендуемые действия В зависимости от результата анализа аналитик может: - пометить письмо как phishing; - удалить письмо из почтовых ящиков пользователей; - заблокировать URL на proxy, firewall или DNS-фильтре; - заблокировать домен отправителя; - отправить файл в sandbox; - инициировать сброс пароля пользователя; - проверить логи входа пользователя; - проверить наличие похожих писем у других сотрудников; - создать инцидент для дальнейшего расследования. [3]\n\nИсточники:\n[1] Runbook: Первичный разбор phishing-инцидента, раздел: ## Проверка ссылок (runbook), chunk_id=31, score=0.774\n[2] Runbook: Первичный разбор phishing-инцидента, раздел: ## Признаки высокого риска (runbook), chunk_id=33, score=0.751\n[3] Runbook: Первичный разбор phishing-инцидента, раздел: ## Рекомендуемые действия (runbook), chunk_id=34, score=0.750",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 31,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Проверка ссылок",
+          "score": 0.7736353,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 33,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Признаки высокого риска",
+          "score": 0.7511517,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 34,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Рекомендуемые действия",
+          "score": 0.75005007,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 27,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Назначение",
+          "score": 0.7364063,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 30,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Первичная проверка отправителя",
+          "score": 0.70679176,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q002",
+      "question": "Какие признаки высокого риска есть у phishing-инцидента?",
+      "language": "ru",
+      "tags": [
+        "phishing",
+        "incident-response"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 164,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "Признаки высокого риска",
+        "пользователь ввёл пароль",
+        "фишинговую страницу"
+      ],
+      "expected_source_keywords": [
+        "Признаки высокого риска",
+        "пользователь ввёл пароль",
+        "фишинговую страницу"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Первичный разбор phishing-инцидента ## Признаки высокого риска Инцидент следует считать высокорисковым, если: - пользователь ввёл пароль на подозрительном сайте; - пользователь запустил вложение; - письмо содержит вредоносный файл; - ссылка ведёт на фишинговую страницу входа; - письмо отправлено многим сотрудникам; - письмо имитирует внутренний сервис организации; - обнаружены признаки компрометации учётной записи. [1]\n2. # Runbook: Первичный разбор phishing-инцидента ## Итоговая классификация Возможные статусы: - false positive; - suspicious email; - confirmed phishing; - credential phishing; - malware delivery; - business email compromise. [2]\n3. # Runbook: Первичный разбор phishing-инцидента ## Проверка ссылок При анализе ссылок нужно: - извлечь все URL из письма; - проверить видимый текст ссылки и фактический адрес; - обратить внимание на сокращатели ссылок; - проверить домены на сходство с легитимными; - проверить URL в threat intelligence источниках; - не открывать ссылку напрямую с рабочей машины. Подозрительными считаются ссылки, которые ведут на страницы ввода пароля, формы авторизации, неизвестные домены или недавно зарегистрированные домены. [3]\n\nИсточники:\n[1] Runbook: Первичный разбор phishing-инцидента, раздел: ## Признаки высокого риска (runbook), chunk_id=33, score=0.750\n[2] Runbook: Первичный разбор phishing-инцидента, раздел: ## Итоговая классификация (runbook), chunk_id=36, score=0.669\n[3] Runbook: Первичный разбор phishing-инцидента, раздел: ## Проверка ссылок (runbook), chunk_id=31, score=0.667",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 33,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Признаки высокого риска",
+          "score": 0.7504152,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 36,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Итоговая классификация",
+          "score": 0.6690068,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 31,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Проверка ссылок",
+          "score": 0.66653156,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 34,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Рекомендуемые действия",
+          "score": 0.6653372,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 32,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Проверка вложений",
+          "score": 0.6055877,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q003",
+      "question": "Что нужно сделать с подозрительными ссылками в письме?",
+      "language": "ru",
+      "tags": [
+        "phishing",
+        "url"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 0.3333333333333333,
+      "latency_ms": 92,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "URL"
+      ],
+      "expected_source_keywords": [
+        "Проверка ссылок",
+        "URL",
+        "threat intelligence"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # T1566.002 — Spearphishing Link ## Description Adversaries may also include links that are intended to interact directly with an email reader, including embedded images intended to exploit the end system directly. Additionally, adversaries may use seemingly benign links that abuse special characters to mimic legitimate websites (known as an \"IDN homograph attack\").(Citation: CISA IDN ST05-016) URLs may also be obfuscated by taking advantage of quirks in the URL schema, such as the acceptance of integer- or hexadecimal-based hostname formats and the automatic discarding of text before an “@” symbol: for example, `hxxp://google.com@1157586937`.(Citation: Mandiant URL Obfuscation 2023) [1]\n2. # T1566.002 — Spearphishing Link ## Description Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems. Spearphishing with a link is a specific variant of spearphishing. It is different from other forms of spearphishing in that it employs the use of links to download malware contained in email, instead of attaching malicious files to the email itself, to avoid defenses that may inspect email attachments. Spearphishing may also involve social engineering techniques, such as posing as a trusted source. [2]\n3. # T1566.001 — Spearphishing Attachment ## Description There are many options for the attachment such as Microsoft Office documents, executables, PDFs, or archived files. Upon opening the attachment (and potentially clicking past protections), the adversary's payload exploits a vulnerability or directly executes on the user's system. The text of the spearphishing email usually tries to give a plausible reason why the file should be opened, and may explain how to bypass system protections in order to do so. The email may also contain instructions on how to decrypt an attachment, such as a zip file password, in order to evade email boundary defenses. Adversaries frequently manipulate file exten... [3]\n\nИсточники:\n[1] T1566.002 — Spearphishing Link, раздел: ## Description (mitre_attack), chunk_id=518, score=0.633\n[2] T1566.002 — Spearphishing Link, раздел: ## Description (mitre_attack), chunk_id=516, score=0.543\n[3] T1566.001 — Spearphishing Attachment, раздел: ## Description (mitre_attack), chunk_id=508, score=0.534",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 518,
+          "document_id": 51,
+          "title": "T1566.002 — Spearphishing Link",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.632558,
+          "local_path": "data/raw/mitre/t1566_002_spearphishing_link.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 516,
+          "document_id": 51,
+          "title": "T1566.002 — Spearphishing Link",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.5433089,
+          "local_path": "data/raw/mitre/t1566_002_spearphishing_link.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 508,
+          "document_id": 50,
+          "title": "T1566.001 — Spearphishing Attachment",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.5343586,
+          "local_path": "data/raw/mitre/t1566_001_spearphishing_attachment.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 520,
+          "document_id": 51,
+          "title": "T1566.002 — Spearphishing Link",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.5314599,
+          "local_path": "data/raw/mitre/t1566_002_spearphishing_link.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 517,
+          "document_id": 51,
+          "title": "T1566.002 — Spearphishing Link",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.5239558,
+          "local_path": "data/raw/mitre/t1566_002_spearphishing_link.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q004",
+      "question": "Какие вложения в письме считаются особенно опасными?",
+      "language": "ru",
+      "tags": [
+        "phishing",
+        "malware"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "first_relevant_rank": 3,
+      "keyword_recall": 0.5,
+      "latency_ms": 148,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "exe",
+        "lnk"
+      ],
+      "expected_source_keywords": [
+        "exe",
+        "js",
+        "ps1",
+        "lnk"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # T1486 — Data Encrypted for Impact ## Description idate victims by sending ransom notes or other messages to connected printers (known as \"print bombing\").(Citation: NHS Digital Egregor Nov 2020)(Citation: Varonis) [1]\n2. # Runbook: Первичный разбор phishing-инцидента ## Признаки высокого риска Инцидент следует считать высокорисковым, если: - пользователь ввёл пароль на подозрительном сайте; - пользователь запустил вложение; - письмо содержит вредоносный файл; - ссылка ведёт на фишинговую страницу входа; - письмо отправлено многим сотрудникам; - письмо имитирует внутренний сервис организации; - обнаружены признаки компрометации учётной записи. [2]\n3. # T1204.002 — Malicious File ## Description An adversary may rely upon a user opening a malicious file in order to gain execution. Users may be subjected to social engineering to get them to open a file that will lead to code execution. This user action will typically be observed as follow-on behavior from [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001). Adversaries may use several types of files that require a user to execute them, including .doc, .pdf, .xls, .rtf, .scr, .exe, .lnk, .pif, .cpl, .reg, and .iso.(Citation: Mandiant Trojanized Windows 10) [3]\n\nИсточники:\n[1] T1486 — Data Encrypted for Impact, раздел: ## Description (mitre_attack), chunk_id=439, score=0.529\n[2] Runbook: Первичный разбор phishing-инцидента, раздел: ## Признаки высокого риска (runbook), chunk_id=33, score=0.446\n[3] T1204.002 — Malicious File, раздел: ## Description (mitre_attack), chunk_id=416, score=0.424",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 439,
+          "document_id": 43,
+          "title": "T1486 — Data Encrypted for Impact",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.52939606,
+          "local_path": "data/raw/mitre/t1486_data_encrypted_for_impact.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 33,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Признаки высокого риска",
+          "score": 0.4456283,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 416,
+          "document_id": 41,
+          "title": "T1204.002 — Malicious File",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.4239282,
+          "local_path": "data/raw/mitre/t1204_002_malicious_file.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 12,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Prevention",
+          "score": 0.4227084,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 632,
+          "document_id": 11,
+          "title": "A06:2025 Insecure Design ![icon](../assets/TOP_10_Icons_Final_Insecure_Design.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "### Secure Design",
+          "score": 0.41817105,
+          "local_path": "data/raw/owasp/A06_2025-Insecure_Design.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q005",
+      "question": "Какие статусы классификации могут быть у phishing-инцидента?",
+      "language": "ru",
+      "tags": [
+        "phishing",
+        "classification"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 112,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "confirmed phishing",
+        "credential phishing",
+        "malware delivery"
+      ],
+      "expected_source_keywords": [
+        "confirmed phishing",
+        "credential phishing",
+        "malware delivery"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Первичный разбор phishing-инцидента ## Итоговая классификация Возможные статусы: - false positive; - suspicious email; - confirmed phishing; - credential phishing; - malware delivery; - business email compromise. [1]\n2. # Runbook: Первичный разбор phishing-инцидента ## Признаки высокого риска Инцидент следует считать высокорисковым, если: - пользователь ввёл пароль на подозрительном сайте; - пользователь запустил вложение; - письмо содержит вредоносный файл; - ссылка ведёт на фишинговую страницу входа; - письмо отправлено многим сотрудникам; - письмо имитирует внутренний сервис организации; - обнаружены признаки компрометации учётной записи. [2]\n3. # Runbook: Первичный разбор phishing-инцидента ## Рекомендуемые действия В зависимости от результата анализа аналитик может: - пометить письмо как phishing; - удалить письмо из почтовых ящиков пользователей; - заблокировать URL на proxy, firewall или DNS-фильтре; - заблокировать домен отправителя; - отправить файл в sandbox; - инициировать сброс пароля пользователя; - проверить логи входа пользователя; - проверить наличие похожих писем у других сотрудников; - создать инцидент для дальнейшего расследования. [3]\n\nИсточники:\n[1] Runbook: Первичный разбор phishing-инцидента, раздел: ## Итоговая классификация (runbook), chunk_id=36, score=0.754\n[2] Runbook: Первичный разбор phishing-инцидента, раздел: ## Признаки высокого риска (runbook), chunk_id=33, score=0.722\n[3] Runbook: Первичный разбор phishing-инцидента, раздел: ## Рекомендуемые действия (runbook), chunk_id=34, score=0.696",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 36,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Итоговая классификация",
+          "score": 0.753631,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 33,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Признаки высокого риска",
+          "score": 0.7220803,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 34,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Рекомендуемые действия",
+          "score": 0.69594413,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 31,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Проверка ссылок",
+          "score": 0.6867761,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 35,
+          "document_id": 4,
+          "title": "Runbook: Первичный разбор phishing-инцидента",
+          "source_type": "runbook",
+          "section_title": "## Что логировать",
+          "score": 0.6744064,
+          "local_path": "data/raw/synthetic_runbooks/phishing_triage_runbook_ru.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q006",
+      "question": "Какие параметры PowerShell считаются подозрительными?",
+      "language": "ru",
+      "tags": [
+        "powershell",
+        "windows",
+        "soc"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
+      "keyword_recall": 0.0,
+      "latency_ms": 100,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [],
+      "expected_source_keywords": [
+        "EncodedCommand",
+        "ExecutionPolicy Bypass",
+        "NoProfile"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Анализ подозрительной PowerShell-активности ## Возможные сценарии атаки Подозрительная PowerShell-активность может быть связана с: - phishing-вложением; - загрузчиком malware; - reverse shell; - credential theft; - lateral movement; - reconnaissance; - persistence; - отключением защитных средств. [1]\n2. # Runbook: Анализ подозрительной PowerShell-активности ## Назначение Документ описывает порядок первичного анализа подозрительной PowerShell-активности на Windows-хосте. PowerShell часто используется администраторами, но также может применяться злоумышленниками для загрузки вредоносного кода, обхода защитных механизмов, сбора данных и закрепления в системе. [2]\n3. # Runbook: Анализ подозрительной PowerShell-активности ## Итоговая классификация Возможные статусы: - benign admin activity; - suspicious PowerShell; - malware downloader; - post-exploitation activity; - confirmed compromise. [3]\n\nИсточники:\n[1] Runbook: Анализ подозрительной PowerShell-активности, раздел: ## Возможные сценарии атаки (runbook), chunk_id=55, score=0.803\n[2] Runbook: Анализ подозрительной PowerShell-активности, раздел: ## Назначение (runbook), chunk_id=48, score=0.759\n[3] Runbook: Анализ подозрительной PowerShell-активности, раздел: ## Итоговая классификация (runbook), chunk_id=58, score=0.758",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 55,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Возможные сценарии атаки",
+          "score": 0.8027099,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 48,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Назначение",
+          "score": 0.75926054,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 58,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Итоговая классификация",
+          "score": 0.75823534,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 53,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Анализ сетевой активности",
+          "score": 0.74732226,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 49,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Когда использовать",
+          "score": 0.7464969,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q007",
+      "question": "Почему запуск PowerShell из Word может быть опасным?",
+      "language": "ru",
+      "tags": [
+        "powershell",
+        "malware",
+        "office"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "first_relevant_rank": 2,
+      "keyword_recall": 1.0,
+      "latency_ms": 119,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "winword.exe",
+        "Microsoft Word",
+        "макросом"
+      ],
+      "expected_source_keywords": [
+        "winword.exe",
+        "Microsoft Word",
+        "макросом"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # T1059.001 — PowerShell ## Description Adversaries may abuse PowerShell commands and scripts for execution. PowerShell is a powerful interactive command-line interface and scripting environment included in the Windows operating system.(Citation: TechNet PowerShell) Adversaries can use PowerShell to perform a number of actions, including discovery of information and execution of code. Examples include the <code>Start-Process</code> cmdlet which can be used to run an executable and the <code>Invoke-Command</code> cmdlet which runs a command locally or on a remote computer (though administrator permissions are required to use PowerShell to connect to remote systems). [1]\n2. # Runbook: Анализ подозрительной PowerShell-активности ## Анализ родительского процесса Аналитик должен проверить, какой процесс запустил PowerShell. Высокий риск, если родительский процесс: - winword.exe; - excel.exe; - outlook.exe; - chrome.exe; - msedge.exe; - firefox.exe; - 7z.exe; - winrar.exe; - wscript.exe; - cscript.exe. Например, запуск PowerShell из Microsoft Word может указывать на вредоносный документ с макросом. [2]\n3. # Runbook: Анализ подозрительной PowerShell-активности ## Когда использовать Runbook используется, если SIEM, EDR или антивирус зафиксировали: - запуск PowerShell с подозрительными параметрами; - выполнение закодированной команды; - загрузку данных из интернета; - запуск PowerShell от имени необычного пользователя; - выполнение PowerShell из офисного документа, браузера или архиватора; - подозрительную активность после phishing-письма. [3]\n\nИсточники:\n[1] T1059.001 — PowerShell, раздел: ## Description (mitre_attack), chunk_id=346, score=0.729\n[2] Runbook: Анализ подозрительной PowerShell-активности, раздел: ## Анализ родительского процесса (runbook), chunk_id=52, score=0.674\n[3] Runbook: Анализ подозрительной PowerShell-активности, раздел: ## Когда использовать (runbook), chunk_id=49, score=0.661",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 346,
+          "document_id": 33,
+          "title": "T1059.001 — PowerShell",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.7291309,
+          "local_path": "data/raw/mitre/t1059_001_powershell.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 52,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Анализ родительского процесса",
+          "score": 0.6743592,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 49,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Когда использовать",
+          "score": 0.66105986,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 348,
+          "document_id": 33,
+          "title": "T1059.001 — PowerShell",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.6596142,
+          "local_path": "data/raw/mitre/t1059_001_powershell.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 54,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Анализ командной строки",
+          "score": 0.65058935,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q008",
+      "question": "Что нужно проверить при сетевой активности PowerShell?",
+      "language": "ru",
+      "tags": [
+        "powershell",
+        "network"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 113,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "сетевой активности",
+        "IP-адресам",
+        "доменам"
+      ],
+      "expected_source_keywords": [
+        "сетевой активности",
+        "IP-адресам",
+        "доменам"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Анализ подозрительной PowerShell-активности ## Анализ сетевой активности Нужно проверить: - устанавливал ли PowerShell внешние соединения; - к каким IP-адресам и доменам было обращение; - использовались ли HTTP или HTTPS запросы; - были ли скачаны исполняемые файлы или скрипты; - есть ли домены с плохой репутацией; - есть ли соединения с недавно зарегистрированными доменами. Подозрительно, если PowerShell загружает скрипт из интернета и сразу выполняет его в памяти. [1]\n2. # Runbook: Анализ подозрительной PowerShell-активности ## Когда использовать Runbook используется, если SIEM, EDR или антивирус зафиксировали: - запуск PowerShell с подозрительными параметрами; - выполнение закодированной команды; - загрузку данных из интернета; - запуск PowerShell от имени необычного пользователя; - выполнение PowerShell из офисного документа, браузера или архиватора; - подозрительную активность после phishing-письма. [2]\n3. # Runbook: Анализ подозрительной PowerShell-активности ## Назначение Документ описывает порядок первичного анализа подозрительной PowerShell-активности на Windows-хосте. PowerShell часто используется администраторами, но также может применяться злоумышленниками для загрузки вредоносного кода, обхода защитных механизмов, сбора данных и закрепления в системе. [3]\n\nИсточники:\n[1] Runbook: Анализ подозрительной PowerShell-активности, раздел: ## Анализ сетевой активности (runbook), chunk_id=53, score=0.831\n[2] Runbook: Анализ подозрительной PowerShell-активности, раздел: ## Когда использовать (runbook), chunk_id=49, score=0.753\n[3] Runbook: Анализ подозрительной PowerShell-активности, раздел: ## Назначение (runbook), chunk_id=48, score=0.753",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 53,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Анализ сетевой активности",
+          "score": 0.8306372,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 49,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Когда использовать",
+          "score": 0.7529162,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 48,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Назначение",
+          "score": 0.75278556,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 50,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Входные данные",
+          "score": 0.7448853,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 56,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Рекомендуемые действия",
+          "score": 0.7382874,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q009",
+      "question": "Что делать, если команда PowerShell закодирована в Base64?",
+      "language": "ru",
+      "tags": [
+        "powershell",
+        "base64"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 94,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "Base64",
+        "декодировать",
+        "изолированной среде"
+      ],
+      "expected_source_keywords": [
+        "Base64",
+        "декодировать",
+        "изолированной среде"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Анализ подозрительной PowerShell-активности ## Анализ командной строки Командную строку нужно сохранить полностью. Если команда закодирована в Base64, её нужно декодировать в изолированной среде. Признаки высокого риска: - обфускация команд; - длинная строка Base64; - загрузка скрипта из внешнего URL; - выполнение кода через `IEX`; - отключение политик выполнения; - попытки отключить защиту; - запуск инструментов постэксплуатации. [1]\n2. # T1059.001 — PowerShell ## Description PowerShell commands/scripts can also be executed without directly invoking the <code>powershell.exe</code> binary through interfaces to PowerShell's underlying <code>System.Management.Automation</code> assembly DLL exposed through the .NET framework and Windows Common Language Interface (CLI).(Citation: Sixdub PowerPick Jan 2016)(Citation: SilentBreak Offensive PS Dec 2015)(Citation: Microsoft PSfromCsharp APR 2014) [2]\n3. # T1059.001 — PowerShell ## Description Adversaries may abuse PowerShell commands and scripts for execution. PowerShell is a powerful interactive command-line interface and scripting environment included in the Windows operating system.(Citation: TechNet PowerShell) Adversaries can use PowerShell to perform a number of actions, including discovery of information and execution of code. Examples include the <code>Start-Process</code> cmdlet which can be used to run an executable and the <code>Invoke-Command</code> cmdlet which runs a command locally or on a remote computer (though administrator permissions are required to use PowerShell to connect to remote systems). [3]\n\nИсточники:\n[1] Runbook: Анализ подозрительной PowerShell-активности, раздел: ## Анализ командной строки (runbook), chunk_id=54, score=0.756\n[2] T1059.001 — PowerShell, раздел: ## Description (mitre_attack), chunk_id=348, score=0.692\n[3] T1059.001 — PowerShell, раздел: ## Description (mitre_attack), chunk_id=346, score=0.666",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 54,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Анализ командной строки",
+          "score": 0.7558739,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 348,
+          "document_id": 33,
+          "title": "T1059.001 — PowerShell",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.6916216,
+          "local_path": "data/raw/mitre/t1059_001_powershell.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 346,
+          "document_id": 33,
+          "title": "T1059.001 — PowerShell",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.6656607,
+          "local_path": "data/raw/mitre/t1059_001_powershell.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 51,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Подозрительные параметры PowerShell",
+          "score": 0.6643845,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 347,
+          "document_id": 33,
+          "title": "T1059.001 — PowerShell",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.6502993,
+          "local_path": "data/raw/mitre/t1059_001_powershell.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q010",
+      "question": "Какие сценарии атаки могут быть связаны с подозрительной PowerShell-активностью?",
+      "language": "ru",
+      "tags": [
+        "powershell",
+        "attack"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 100,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "reverse shell",
+        "credential theft",
+        "lateral movement"
+      ],
+      "expected_source_keywords": [
+        "reverse shell",
+        "credential theft",
+        "lateral movement"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Анализ подозрительной PowerShell-активности ## Возможные сценарии атаки Подозрительная PowerShell-активность может быть связана с: - phishing-вложением; - загрузчиком malware; - reverse shell; - credential theft; - lateral movement; - reconnaissance; - persistence; - отключением защитных средств. [1]\n2. # Malicious PowerShell Commandlets - PoshModule ## ATT&CK and Sigma tags - attack.execution - attack.discovery - attack.t1482 - attack.t1087 - attack.t1087.001 - attack.t1087.002 - attack.t1069.001 - attack.t1069.002 - attack.t1069 - attack.t1059.001 [2]\n3. # Malicious PowerShell Commandlets - PoshModule ## References - https://adsecurity.org/?p=2921 - https://github.com/S3cur3Th1sSh1t/PowerSharpPack/tree/master/PowerSharpBinaries - https://github.com/BC-SECURITY/Invoke-ZeroLogon/blob/111d17c7fec486d9bb23387e2e828b09a26075e4/Invoke-ZeroLogon.ps1 - https://github.com/xorrior/RandomPS-Scripts/blob/848c919bfce4e2d67b626cbcf4404341cfe3d3b6/Get-DXWebcamVideo.ps1 - https://github.com/rvrsh3ll/Misc-Powershell-Scripts/blob/6f23bb41f9675d7e2d32bacccff75e931ae00554/OfficeMemScraper.ps1 - https://github.com/dafthack/DomainPasswordSpray/blob/b13d64a5834694aa73fd2aea9911a83027c465a7/DomainPasswordSpray.ps1 - https://unit42.paloaltonetworks.com/threat-assess... [3]\n\nИсточники:\n[1] Runbook: Анализ подозрительной PowerShell-активности, раздел: ## Возможные сценарии атаки (runbook), chunk_id=55, score=0.854\n[2] Malicious PowerShell Commandlets - PoshModule, раздел: ## ATT&CK and Sigma tags (sigma_rule), chunk_id=869, score=0.731\n[3] Malicious PowerShell Commandlets - PoshModule, раздел: ## References (sigma_rule), chunk_id=866, score=0.713",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 55,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Возможные сценарии атаки",
+          "score": 0.85398823,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 869,
+          "document_id": 72,
+          "title": "Malicious PowerShell Commandlets - PoshModule",
+          "source_type": "sigma_rule",
+          "section_title": "## ATT&CK and Sigma tags",
+          "score": 0.7311965,
+          "local_path": "data/raw/sources/sigma/posh_pm_malicious_commandlets.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 866,
+          "document_id": 72,
+          "title": "Malicious PowerShell Commandlets - PoshModule",
+          "source_type": "sigma_rule",
+          "section_title": "## References",
+          "score": 0.7127429,
+          "local_path": "data/raw/sources/sigma/posh_pm_malicious_commandlets.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 940,
+          "document_id": 14,
+          "title": "HackTool - Empire PowerShell Launch Parameters",
+          "source_type": "sigma_rule",
+          "section_title": "## ATT&CK and Sigma tags",
+          "score": 0.70303714,
+          "local_path": "data/raw/sources/sigma/proc_creation_win_hktl_empire_powershell_launch.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 49,
+          "document_id": 6,
+          "title": "Runbook: Анализ подозрительной PowerShell-активности",
+          "source_type": "runbook",
+          "section_title": "## Когда использовать",
+          "score": 0.70160234,
+          "local_path": "data/raw/synthetic_runbooks/suspicious_powershell_runbook_ru.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q011",
+      "question": "Какие первые действия нужны при ransomware-инциденте?",
+      "language": "ru",
+      "tags": [
+        "ransomware",
+        "incident-response"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 132,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "Изолировать заражённые хосты",
+        "резервных копий",
+        "сбор артефактов"
+      ],
+      "expected_source_keywords": [
+        "Изолировать заражённые хосты",
+        "резервных копий",
+        "сбор артефактов"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Первичное реагирование на ransomware-инцидент ## Первичные действия При подтверждённом или вероятном ransomware нужно: 1. Изолировать заражённые хосты от сети. 2. Не выключать систему без необходимости. 3. Зафиксировать время обнаружения. 4. Сохранить ransom note и примеры зашифрованных файлов. 5. Проверить, есть ли признаки распространения на другие хосты. 6. Уведомить IR-команду и ответственных лиц. 7. Ограничить доступ к общим сетевым папкам. 8. Проверить состояние резервных копий. 9. Заблокировать известные индикаторы компрометации. 10. Начать сбор артефактов. [1]\n2. # Runbook: Первичное реагирование на ransomware-инцидент ## Назначение Документ описывает первичные действия при подозрении на ransomware-инцидент. Цель — быстро ограничить распространение атаки, сохранить доказательства, защитить резервные копии и подготовить дальнейшее расследование. [2]\n3. # Runbook: Первичное реагирование на ransomware-инцидент ## Рекомендуемые меры containment В зависимости от ситуации можно: - изолировать хосты через EDR; - отключить сетевые порты; - временно заблокировать SMB-доступ; - отключить скомпрометированные учётные записи; - сбросить пароли привилегированных пользователей; - заблокировать IOC на firewall, proxy, DNS и EDR; - остановить распространение через сетевые шары. [3]\n\nИсточники:\n[1] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Первичные действия (runbook), chunk_id=40, score=0.866\n[2] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Назначение (runbook), chunk_id=37, score=0.804\n[3] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Рекомендуемые меры containment (runbook), chunk_id=45, score=0.766",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Первичные действия",
+          "score": 0.8660225,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 37,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Назначение",
+          "score": 0.80444646,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 45,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Рекомендуемые меры containment",
+          "score": 0.7659866,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 39,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Основные признаки ransomware",
+          "score": 0.762557,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 9,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Overview",
+          "score": 0.7459685,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q012",
+      "question": "Почему не стоит сразу выключать хост при ransomware?",
+      "language": "ru",
+      "tags": [
+        "ransomware",
+        "forensics"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 86,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "не стоит сразу выключать",
+        "активных процессов",
+        "сетевых соединений"
+      ],
+      "expected_source_keywords": [
+        "не стоит сразу выключать",
+        "активных процессов",
+        "сетевых соединений"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Первичное реагирование на ransomware-инцидент ## Почему не стоит сразу выключать хост Выключение системы может привести к потере важных данных для расследования: - активных процессов; - сетевых соединений; - содержимого памяти; - временных файлов; - следов выполнения вредоносного ПО. Если шифрование продолжается, приоритетом является изоляция хоста от сети. [1]\n2. # Runbook: Первичное реагирование на ransomware-инцидент ## Первичные действия При подтверждённом или вероятном ransomware нужно: 1. Изолировать заражённые хосты от сети. 2. Не выключать систему без необходимости. 3. Зафиксировать время обнаружения. 4. Сохранить ransom note и примеры зашифрованных файлов. 5. Проверить, есть ли признаки распространения на другие хосты. 6. Уведомить IR-команду и ответственных лиц. 7. Ограничить доступ к общим сетевым папкам. 8. Проверить состояние резервных копий. 9. Заблокировать известные индикаторы компрометации. 10. Начать сбор артефактов. [2]\n3. # Runbook: Первичное реагирование на ransomware-инцидент ## Рекомендуемые меры containment В зависимости от ситуации можно: - изолировать хосты через EDR; - отключить сетевые порты; - временно заблокировать SMB-доступ; - отключить скомпрометированные учётные записи; - сбросить пароли привилегированных пользователей; - заблокировать IOC на firewall, proxy, DNS и EDR; - остановить распространение через сетевые шары. [3]\n\nИсточники:\n[1] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Почему не стоит сразу выключать хост (runbook), chunk_id=41, score=0.805\n[2] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Первичные действия (runbook), chunk_id=40, score=0.755\n[3] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Рекомендуемые меры containment (runbook), chunk_id=45, score=0.736",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 41,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Почему не стоит сразу выключать хост",
+          "score": 0.8052578,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Первичные действия",
+          "score": 0.75504726,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 45,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Рекомендуемые меры containment",
+          "score": 0.73568404,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 39,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Основные признаки ransomware",
+          "score": 0.6805095,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 37,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Назначение",
+          "score": 0.65737396,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q013",
+      "question": "Какие признаки могут указывать на ransomware?",
+      "language": "ru",
+      "tags": [
+        "ransomware",
+        "detection"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 0.6666666666666666,
+      "latency_ms": 74,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "ransom note",
+        "shadow copies"
+      ],
+      "expected_source_keywords": [
+        "ransom note",
+        "расширений файлов",
+        "shadow copies"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Первичное реагирование на ransomware-инцидент ## Основные признаки ransomware К типичным признакам относятся: - появление файлов с инструкциями по оплате выкупа; - изменение расширений у большого числа файлов; - массовое создание, переименование или удаление файлов; - остановка сервисов резервного копирования; - удаление shadow copies; - отключение антивируса или EDR; - подозрительная активность PowerShell, PsExec, WMI или RDP. [1]\n2. # Runbook: Первичное реагирование на ransomware-инцидент ## Первичные действия При подтверждённом или вероятном ransomware нужно: 1. Изолировать заражённые хосты от сети. 2. Не выключать систему без необходимости. 3. Зафиксировать время обнаружения. 4. Сохранить ransom note и примеры зашифрованных файлов. 5. Проверить, есть ли признаки распространения на другие хосты. 6. Уведомить IR-команду и ответственных лиц. 7. Ограничить доступ к общим сетевым папкам. 8. Проверить состояние резервных копий. 9. Заблокировать известные индикаторы компрометации. 10. Начать сбор артефактов. [2]\n3. # Ransomware Risk Management Summary ## Detection Detection should focus on early signs of compromise, such as: - suspicious PowerShell activity; - unusual authentication patterns; - mass file modification; - unexpected encryption behavior; - deletion of shadow copies; - abnormal SMB traffic; - unusual access to backup systems; - EDR alerts related to credential theft or lateral movement. [3]\n\nИсточники:\n[1] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Основные признаки ransomware (runbook), chunk_id=39, score=0.820\n[2] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Первичные действия (runbook), chunk_id=40, score=0.796\n[3] Ransomware Risk Management Summary, раздел: ## Detection (nist), chunk_id=13, score=0.771",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 39,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Основные признаки ransomware",
+          "score": 0.8199858,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Первичные действия",
+          "score": 0.79554224,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 13,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Detection",
+          "score": 0.7705175,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 37,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Назначение",
+          "score": 0.74062,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 46,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Что логировать",
+          "score": 0.73008347,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q014",
+      "question": "Что нужно проверить для оценки распространения ransomware?",
+      "language": "ru",
+      "tags": [
+        "ransomware",
+        "lateral-movement"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "first_relevant_rank": 2,
+      "keyword_recall": 1.0,
+      "latency_ms": 76,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "RDP",
+        "PsExec",
+        "WMI",
+        "SMB"
+      ],
+      "expected_source_keywords": [
+        "RDP",
+        "PsExec",
+        "WMI",
+        "SMB"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Первичное реагирование на ransomware-инцидент ## Первичные действия При подтверждённом или вероятном ransomware нужно: 1. Изолировать заражённые хосты от сети. 2. Не выключать систему без необходимости. 3. Зафиксировать время обнаружения. 4. Сохранить ransom note и примеры зашифрованных файлов. 5. Проверить, есть ли признаки распространения на другие хосты. 6. Уведомить IR-команду и ответственных лиц. 7. Ограничить доступ к общим сетевым папкам. 8. Проверить состояние резервных копий. 9. Заблокировать известные индикаторы компрометации. 10. Начать сбор артефактов. [1]\n2. # Runbook: Первичное реагирование на ransomware-инцидент ## Проверка распространения Аналитик должен проверить: - есть ли похожие симптомы на других хостах; - были ли подключения через RDP; - использовались ли PsExec, WMI или SMB; - были ли массовые обращения к сетевым папкам; - есть ли подозрительные входы доменных пользователей; - не скомпрометированы ли учётные записи администраторов. [2]\n3. # Runbook: Первичное реагирование на ransomware-инцидент ## Защита резервных копий Необходимо: - проверить доступность резервных копий; - изолировать backup-хранилище от заражённой сети; - проверить, не были ли удалены или зашифрованы backup-файлы; - не начинать восстановление до завершения containment; - проверить резервные копии на наличие вредоносных файлов. [3]\n\nИсточники:\n[1] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Первичные действия (runbook), chunk_id=40, score=0.819\n[2] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Проверка распространения (runbook), chunk_id=43, score=0.801\n[3] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Защита резервных копий (runbook), chunk_id=44, score=0.770",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Первичные действия",
+          "score": 0.8194191,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 43,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Проверка распространения",
+          "score": 0.8008701,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 44,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Защита резервных копий",
+          "score": 0.76951784,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 9,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Overview",
+          "score": 0.7640644,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 17,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## SOC triage questions",
+          "score": 0.7638334,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q015",
+      "question": "Как защитить резервные копии во время ransomware-инцидента?",
+      "language": "ru",
+      "tags": [
+        "ransomware",
+        "backup"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 131,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "backup",
+        "резервных копий",
+        "изолировать backup-хранилище"
+      ],
+      "expected_source_keywords": [
+        "backup",
+        "резервных копий",
+        "изолировать backup-хранилище"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Первичное реагирование на ransomware-инцидент ## Защита резервных копий Необходимо: - проверить доступность резервных копий; - изолировать backup-хранилище от заражённой сети; - проверить, не были ли удалены или зашифрованы backup-файлы; - не начинать восстановление до завершения containment; - проверить резервные копии на наличие вредоносных файлов. [1]\n2. # Runbook: Первичное реагирование на ransomware-инцидент ## Первичные действия При подтверждённом или вероятном ransomware нужно: 1. Изолировать заражённые хосты от сети. 2. Не выключать систему без необходимости. 3. Зафиксировать время обнаружения. 4. Сохранить ransom note и примеры зашифрованных файлов. 5. Проверить, есть ли признаки распространения на другие хосты. 6. Уведомить IR-команду и ответственных лиц. 7. Ограничить доступ к общим сетевым папкам. 8. Проверить состояние резервных копий. 9. Заблокировать известные индикаторы компрометации. 10. Начать сбор артефактов. [2]\n3. # T1486 — Data Encrypted for Impact ## Description In the case of ransomware, it is typical that common user files like Office documents, PDFs, images, videos, audio, text, and source code files will be encrypted (and often renamed and/or tagged with specific file markers). Adversaries may need to first employ other behaviors, such as [File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222) or [System Shutdown/Reboot](https://attack.mitre.org/techniques/T1529), in order to unlock and/or gain access to manipulate these files.(Citation: CarbonBlack Conti July 2020) In some cases, adversaries may encrypt critical system files, disk partitions, and the MBR.(Citati... [3]\n\nИсточники:\n[1] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Защита резервных копий (runbook), chunk_id=44, score=0.835\n[2] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Первичные действия (runbook), chunk_id=40, score=0.775\n[3] T1486 — Data Encrypted for Impact, раздел: ## Description (mitre_attack), chunk_id=436, score=0.741",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 44,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Защита резервных копий",
+          "score": 0.83455455,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Первичные действия",
+          "score": 0.7745912,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 436,
+          "document_id": 43,
+          "title": "T1486 — Data Encrypted for Impact",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.741351,
+          "local_path": "data/raw/mitre/t1486_data_encrypted_for_impact.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 12,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Prevention",
+          "score": 0.7244509,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 440,
+          "document_id": 43,
+          "title": "T1486 — Data Encrypted for Impact",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.7159785,
+          "local_path": "data/raw/mitre/t1486_data_encrypted_for_impact.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q016",
+      "question": "Что такое Credential Dumping?",
+      "language": "ru",
+      "tags": [
+        "mitre",
+        "credential-access"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 100,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "OS Credential Dumping",
+        "Credential Dumping",
+        "T1003"
+      ],
+      "expected_source_keywords": [
+        "OS Credential Dumping",
+        "Credential Dumping",
+        "T1003"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Potential Credential Dumping Via LSASS Process Clone ## Summary Detects a suspicious LSASS process process clone that could be a sign of credential dumping activity [1]\n2. # T1003 — OS Credential Dumping ## Description Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Credentials can be obtained from OS caches, memory, or structures.(Citation: Brining MimiKatz to Unix) Credentials can then be used to perform [Lateral Movement](https://attack.mitre.org/tactics/TA0008) and access restricted information. Several of the tools mentioned in associated sub-techniques may be used by both adversaries and professional security testers. Additional custom tools likely exist as well. [2]\n3. # Potential Credential Dumping Via LSASS Process Clone ## False positives - Unknown [3]\n\nИсточники:\n[1] Potential Credential Dumping Via LSASS Process Clone, раздел: ## Summary (sigma_rule), chunk_id=983, score=0.587\n[2] T1003 — OS Credential Dumping, раздел: ## Description (mitre_attack), chunk_id=258, score=0.577\n[3] Potential Credential Dumping Via LSASS Process Clone, раздел: ## False positives (sigma_rule), chunk_id=987, score=0.566",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 983,
+          "document_id": 15,
+          "title": "Potential Credential Dumping Via LSASS Process Clone",
+          "source_type": "sigma_rule",
+          "section_title": "## Summary",
+          "score": 0.58746624,
+          "local_path": "data/raw/sources/sigma/proc_creation_win_lsass_process_clone.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 258,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.5771928,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 987,
+          "document_id": 15,
+          "title": "Potential Credential Dumping Via LSASS Process Clone",
+          "source_type": "sigma_rule",
+          "section_title": "## False positives",
+          "score": 0.5655601,
+          "local_path": "data/raw/sources/sigma/proc_creation_win_lsass_process_clone.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 882,
+          "document_id": 74,
+          "title": "Credential Dumping Activity By Python Based Tool",
+          "source_type": "sigma_rule",
+          "section_title": "## References",
+          "score": 0.5611525,
+          "local_path": "data/raw/sources/sigma/proc_access_win_lsass_python_based_tool.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 877,
+          "document_id": 74,
+          "title": "Credential Dumping Activity By Python Based Tool",
+          "source_type": "sigma_rule",
+          "section_title": "## Summary",
+          "score": 0.5406161,
+          "local_path": "data/raw/sources/sigma/proc_access_win_lsass_python_based_tool.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q017",
+      "question": "What is OS Credential Dumping used for?",
+      "language": "en",
+      "tags": [
+        "mitre",
+        "credential-access"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
+      "keyword_recall": 0.0,
+      "latency_ms": 116,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [],
+      "expected_source_keywords": [
+        "escalate privileges",
+        "move laterally",
+        "maintain access"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # T1003 — OS Credential Dumping ## Platforms - Linux - Windows - macOS [1]\n2. # T1003 — OS Credential Dumping ## Data sources - Not specified [2]\n3. # T1003 — OS Credential Dumping ## Description Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Credentials can be obtained from OS caches, memory, or structures.(Citation: Brining MimiKatz to Unix) Credentials can then be used to perform [Lateral Movement](https://attack.mitre.org/tactics/TA0008) and access restricted information. Several of the tools mentioned in associated sub-techniques may be used by both adversaries and professional security testers. Additional custom tools likely exist as well. [3]\n\nИсточники:\n[1] T1003 — OS Credential Dumping, раздел: ## Platforms (mitre_attack), chunk_id=260, score=0.700\n[2] T1003 — OS Credential Dumping, раздел: ## Data sources (mitre_attack), chunk_id=262, score=0.679\n[3] T1003 — OS Credential Dumping, раздел: ## Description (mitre_attack), chunk_id=258, score=0.651",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 260,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## Platforms",
+          "score": 0.7000563,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 262,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## Data sources",
+          "score": 0.67881465,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 258,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.6511798,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 261,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## Permissions required",
+          "score": 0.6278274,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 259,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## ATT&CK tactics",
+          "score": 0.62423015,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q018",
+      "question": "Which Windows components may be targeted during credential dumping?",
+      "language": "en",
+      "tags": [
+        "mitre",
+        "windows"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.2,
+      "first_relevant_rank": 5,
+      "keyword_recall": 0.3333333333333333,
+      "latency_ms": 122,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "LSASS"
+      ],
+      "expected_source_keywords": [
+        "LSASS",
+        "SAM",
+        "NTDS.dit"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # T1003 — OS Credential Dumping ## Platforms - Linux - Windows - macOS [1]\n2. # T1003 — OS Credential Dumping ## Data sources - Not specified [2]\n3. # T1003 — OS Credential Dumping ## ATT&CK tactics - credential-access [3]\n\nИсточники:\n[1] T1003 — OS Credential Dumping, раздел: ## Platforms (mitre_attack), chunk_id=260, score=0.653\n[2] T1003 — OS Credential Dumping, раздел: ## Data sources (mitre_attack), chunk_id=262, score=0.642\n[3] T1003 — OS Credential Dumping, раздел: ## ATT&CK tactics (mitre_attack), chunk_id=259, score=0.634",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 260,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## Platforms",
+          "score": 0.65323555,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 262,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## Data sources",
+          "score": 0.64214945,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 259,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## ATT&CK tactics",
+          "score": 0.63412076,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 258,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.62467504,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 985,
+          "document_id": 15,
+          "title": "Potential Credential Dumping Via LSASS Process Clone",
+          "source_type": "sigma_rule",
+          "section_title": "## Log source",
+          "score": 0.6236557,
+          "local_path": "data/raw/sources/sigma/proc_creation_win_lsass_process_clone.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q019",
+      "question": "What suspicious behavior can indicate credential dumping?",
+      "language": "en",
+      "tags": [
+        "mitre",
+        "detection"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
+      "keyword_recall": 0.0,
+      "latency_ms": 87,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [],
+      "expected_source_keywords": [
+        "LSASS memory",
+        "process dumps",
+        "credential dumping tools"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Potential Credential Dumping Via LSASS Process Clone ## Summary Detects a suspicious LSASS process process clone that could be a sign of credential dumping activity [1]\n2. # Credential Dumping Activity By Python Based Tool ## References - https://twitter.com/bh4b3sh/status/1303674603819081728 - https://github.com/skelsec/pypykatz [2]\n3. # Credential Dumping Activity By Python Based Tool ## False positives - Unknown [3]\n\nИсточники:\n[1] Potential Credential Dumping Via LSASS Process Clone, раздел: ## Summary (sigma_rule), chunk_id=983, score=0.666\n[2] Credential Dumping Activity By Python Based Tool, раздел: ## References (sigma_rule), chunk_id=882, score=0.582\n[3] Credential Dumping Activity By Python Based Tool, раздел: ## False positives (sigma_rule), chunk_id=881, score=0.575",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 983,
+          "document_id": 15,
+          "title": "Potential Credential Dumping Via LSASS Process Clone",
+          "source_type": "sigma_rule",
+          "section_title": "## Summary",
+          "score": 0.6663756,
+          "local_path": "data/raw/sources/sigma/proc_creation_win_lsass_process_clone.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 882,
+          "document_id": 74,
+          "title": "Credential Dumping Activity By Python Based Tool",
+          "source_type": "sigma_rule",
+          "section_title": "## References",
+          "score": 0.58206856,
+          "local_path": "data/raw/sources/sigma/proc_access_win_lsass_python_based_tool.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 881,
+          "document_id": 74,
+          "title": "Credential Dumping Activity By Python Based Tool",
+          "source_type": "sigma_rule",
+          "section_title": "## False positives",
+          "score": 0.5753857,
+          "local_path": "data/raw/sources/sigma/proc_access_win_lsass_python_based_tool.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 258,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.56617737,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 877,
+          "document_id": 74,
+          "title": "Credential Dumping Activity By Python Based Tool",
+          "source_type": "sigma_rule",
+          "section_title": "## Summary",
+          "score": 0.56341624,
+          "local_path": "data/raw/sources/sigma/proc_access_win_lsass_python_based_tool.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q020",
+      "question": "Какие защитные меры помогают против credential dumping?",
+      "language": "ru",
+      "tags": [
+        "mitre",
+        "defense"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
+      "keyword_recall": 0.0,
+      "latency_ms": 114,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [],
+      "expected_source_keywords": [
+        "Credential Guard",
+        "local administrator",
+        "monitor access to LSASS"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # T1003 — OS Credential Dumping ## Description Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password. Credentials can be obtained from OS caches, memory, or structures.(Citation: Brining MimiKatz to Unix) Credentials can then be used to perform [Lateral Movement](https://attack.mitre.org/tactics/TA0008) and access restricted information. Several of the tools mentioned in associated sub-techniques may be used by both adversaries and professional security testers. Additional custom tools likely exist as well. [1]\n2. # T1003 — OS Credential Dumping ## ATT&CK tactics - credential-access [2]\n3. # Runbook: Первичное реагирование на ransomware-инцидент ## Рекомендуемые меры containment В зависимости от ситуации можно: - изолировать хосты через EDR; - отключить сетевые порты; - временно заблокировать SMB-доступ; - отключить скомпрометированные учётные записи; - сбросить пароли привилегированных пользователей; - заблокировать IOC на firewall, proxy, DNS и EDR; - остановить распространение через сетевые шары. [3]\n\nИсточники:\n[1] T1003 — OS Credential Dumping, раздел: ## Description (mitre_attack), chunk_id=258, score=0.546\n[2] T1003 — OS Credential Dumping, раздел: ## ATT&CK tactics (mitre_attack), chunk_id=259, score=0.533\n[3] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Рекомендуемые меры containment (runbook), chunk_id=45, score=0.528",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 258,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## Description",
+          "score": 0.5456281,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 259,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## ATT&CK tactics",
+          "score": 0.53319067,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 45,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Рекомендуемые меры containment",
+          "score": 0.5275265,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 882,
+          "document_id": 74,
+          "title": "Credential Dumping Activity By Python Based Tool",
+          "source_type": "sigma_rule",
+          "section_title": "## References",
+          "score": 0.5150038,
+          "local_path": "data/raw/sources/sigma/proc_access_win_lsass_python_based_tool.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 262,
+          "document_id": 1,
+          "title": "T1003 — OS Credential Dumping",
+          "source_type": "mitre_attack",
+          "section_title": "## Data sources",
+          "score": 0.51220477,
+          "local_path": "data/raw/mitre/credential_dumping_t1003.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q021",
+      "question": "What is Broken Access Control?",
+      "language": "en",
+      "tags": [
+        "owasp",
+        "access-control"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 0.6666666666666666,
+      "latency_ms": 75,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "Broken Access Control",
+        "permissions"
+      ],
+      "expected_source_keywords": [
+        "Broken Access Control",
+        "authorization",
+        "permissions"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"} ## Description. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside the user's limits. Common access control vulnerabilities include: [1]\n2. # A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"} ## How to prevent. * Except for public resources, deny by default. * Implement access control mechanisms once and reuse them throughout the application, including minimizing Cross-Origin Resource Sharing (CORS) usage. * Model access controls should enforce record ownership rather than allowing users to create, read, update, or delete any record. * Unique application business limit requirements should be enforced by domain models. * Disable web server directory listing and ensure file metadata (e.g., .git) and backup files are not present within web... [2]\n3. # A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"} ## Description. * Violation of the principle of least privilege, commonly known as deny by default, where access should only be granted for particular capabilities, roles, or users, but is available to anyone. * Bypassing access control checks by modifying the URL (parameter tampering or force browsing), internal application state, or the HTML page, or by using an attack tool that modifies API requests. * Permitting viewing or editing someone else's account by providing its unique identifier (insecure direct object references) * An accessible API wi... [3]\n\nИсточники:\n[1] A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}, раздел: ## Description. (owasp_top10), chunk_id=730, score=0.718\n[2] A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}, раздел: ## How to prevent. (owasp_top10), chunk_id=734, score=0.664\n[3] A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}, раздел: ## Description. (owasp_top10), chunk_id=731, score=0.663",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 730,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## Description.",
+          "score": 0.7175091,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 734,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## How to prevent.",
+          "score": 0.66361904,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 731,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## Description.",
+          "score": 0.663147,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 745,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## List of Mapped CWEs",
+          "score": 0.6406423,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 733,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## How to prevent.",
+          "score": 0.6372782,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q022",
+      "question": "What is horizontal privilege escalation?",
+      "language": "en",
+      "tags": [
+        "owasp",
+        "privilege-escalation"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
+      "keyword_recall": 0.0,
+      "latency_ms": 66,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [],
+      "expected_source_keywords": [
+        "Horizontal privilege escalation",
+        "another user",
+        "same privilege level"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Privilege Escalation via Named Pipe Impersonation ## Summary Detects a remote file copy attempt to a hidden network share. This may indicate lateral movement or data staging activity. [1]\n2. # Privilege Escalation via Named Pipe Impersonation ## False positives - Other programs that cause these patterns (please report) [2]\n3. # ProcessHacker Privilege Elevation ## False positives - Unlikely [3]\n\nИсточники:\n[1] Privilege Escalation via Named Pipe Impersonation, раздел: ## Summary (sigma_rule), chunk_id=1077, score=0.526\n[2] Privilege Escalation via Named Pipe Impersonation, раздел: ## False positives (sigma_rule), chunk_id=1081, score=0.509\n[3] ProcessHacker Privilege Elevation, раздел: ## False positives (sigma_rule), chunk_id=1179, score=0.489",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 1077,
+          "document_id": 94,
+          "title": "Privilege Escalation via Named Pipe Impersonation",
+          "source_type": "sigma_rule",
+          "section_title": "## Summary",
+          "score": 0.5260074,
+          "local_path": "data/raw/sources/sigma/proc_creation_win_susp_priv_escalation_via_named_pipe.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 1081,
+          "document_id": 94,
+          "title": "Privilege Escalation via Named Pipe Impersonation",
+          "source_type": "sigma_rule",
+          "section_title": "## False positives",
+          "score": 0.50947213,
+          "local_path": "data/raw/sources/sigma/proc_creation_win_susp_priv_escalation_via_named_pipe.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 1179,
+          "document_id": 108,
+          "title": "ProcessHacker Privilege Elevation",
+          "source_type": "sigma_rule",
+          "section_title": "## False positives",
+          "score": 0.48858124,
+          "local_path": "data/raw/sources/sigma/win_system_service_install_pua_proceshacker.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 1083,
+          "document_id": 94,
+          "title": "Privilege Escalation via Named Pipe Impersonation",
+          "source_type": "sigma_rule",
+          "section_title": "## ATT&CK and Sigma tags",
+          "score": 0.47853094,
+          "local_path": "data/raw/sources/sigma/proc_creation_win_susp_priv_escalation_via_named_pipe.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 1175,
+          "document_id": 108,
+          "title": "ProcessHacker Privilege Elevation",
+          "source_type": "sigma_rule",
+          "section_title": "## Summary",
+          "score": 0.4699297,
+          "local_path": "data/raw/sources/sigma/win_system_service_install_pua_proceshacker.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q023",
+      "question": "What is vertical privilege escalation?",
+      "language": "en",
+      "tags": [
+        "owasp",
+        "privilege-escalation"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
+      "keyword_recall": 0.0,
+      "latency_ms": 61,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [],
+      "expected_source_keywords": [
+        "Vertical privilege escalation",
+        "regular user",
+        "privileged functions"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Privilege Escalation via Named Pipe Impersonation ## Summary Detects a remote file copy attempt to a hidden network share. This may indicate lateral movement or data staging activity. [1]\n2. # Privilege Escalation via Named Pipe Impersonation ## False positives - Other programs that cause these patterns (please report) [2]\n3. # ProcessHacker Privilege Elevation ## False positives - Unlikely [3]\n\nИсточники:\n[1] Privilege Escalation via Named Pipe Impersonation, раздел: ## Summary (sigma_rule), chunk_id=1077, score=0.531\n[2] Privilege Escalation via Named Pipe Impersonation, раздел: ## False positives (sigma_rule), chunk_id=1081, score=0.514\n[3] ProcessHacker Privilege Elevation, раздел: ## False positives (sigma_rule), chunk_id=1179, score=0.496",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 1077,
+          "document_id": 94,
+          "title": "Privilege Escalation via Named Pipe Impersonation",
+          "source_type": "sigma_rule",
+          "section_title": "## Summary",
+          "score": 0.53115857,
+          "local_path": "data/raw/sources/sigma/proc_creation_win_susp_priv_escalation_via_named_pipe.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 1081,
+          "document_id": 94,
+          "title": "Privilege Escalation via Named Pipe Impersonation",
+          "source_type": "sigma_rule",
+          "section_title": "## False positives",
+          "score": 0.5137192,
+          "local_path": "data/raw/sources/sigma/proc_creation_win_susp_priv_escalation_via_named_pipe.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 1179,
+          "document_id": 108,
+          "title": "ProcessHacker Privilege Elevation",
+          "source_type": "sigma_rule",
+          "section_title": "## False positives",
+          "score": 0.49595347,
+          "local_path": "data/raw/sources/sigma/win_system_service_install_pua_proceshacker.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 1083,
+          "document_id": 94,
+          "title": "Privilege Escalation via Named Pipe Impersonation",
+          "source_type": "sigma_rule",
+          "section_title": "## ATT&CK and Sigma tags",
+          "score": 0.47848746,
+          "local_path": "data/raw/sources/sigma/proc_creation_win_susp_priv_escalation_via_named_pipe.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 1175,
+          "document_id": 108,
+          "title": "ProcessHacker Privilege Elevation",
+          "source_type": "sigma_rule",
+          "section_title": "## Summary",
+          "score": 0.47608745,
+          "local_path": "data/raw/sources/sigma/win_system_service_install_pua_proceshacker.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q024",
+      "question": "Какие причины приводят к Broken Access Control?",
+      "language": "ru",
+      "tags": [
+        "owasp",
+        "root-cause"
+      ],
+      "hit": false,
+      "reciprocal_rank": 0.0,
+      "first_relevant_rank": null,
+      "keyword_recall": 0.0,
+      "latency_ms": 116,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [],
+      "expected_source_keywords": [
+        "frontend",
+        "backend permission checks",
+        "centralized authorization"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"} ## Description. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside the user's limits. Common access control vulnerabilities include: [1]\n2. # A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"} ## How to prevent. * Except for public resources, deny by default. * Implement access control mechanisms once and reuse them throughout the application, including minimizing Cross-Origin Resource Sharing (CORS) usage. * Model access controls should enforce record ownership rather than allowing users to create, read, update, or delete any record. * Unique application business limit requirements should be enforced by domain models. * Disable web server directory listing and ensure file metadata (e.g., .git) and backup files are not present within web... [2]\n3. # A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"} ## Description. * Violation of the principle of least privilege, commonly known as deny by default, where access should only be granted for particular capabilities, roles, or users, but is available to anyone. * Bypassing access control checks by modifying the URL (parameter tampering or force browsing), internal application state, or the HTML page, or by using an attack tool that modifies API requests. * Permitting viewing or editing someone else's account by providing its unique identifier (insecure direct object references) * An accessible API wi... [3]\n\nИсточники:\n[1] A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}, раздел: ## Description. (owasp_top10), chunk_id=730, score=0.750\n[2] A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}, раздел: ## How to prevent. (owasp_top10), chunk_id=734, score=0.715\n[3] A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}, раздел: ## Description. (owasp_top10), chunk_id=731, score=0.684",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 730,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## Description.",
+          "score": 0.7504015,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 734,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## How to prevent.",
+          "score": 0.71544933,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 731,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## Description.",
+          "score": 0.68391556,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 745,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## List of Mapped CWEs",
+          "score": 0.6644582,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 733,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## How to prevent.",
+          "score": 0.6552819,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q025",
+      "question": "How can developers prevent Broken Access Control?",
+      "language": "en",
+      "tags": [
+        "owasp",
+        "prevention"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.2,
+      "first_relevant_rank": 5,
+      "keyword_recall": 0.3333333333333333,
+      "latency_ms": 108,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "least privilege"
+      ],
+      "expected_source_keywords": [
+        "server side",
+        "deny access by default",
+        "least privilege"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"} ## How to prevent. * Except for public resources, deny by default. * Implement access control mechanisms once and reuse them throughout the application, including minimizing Cross-Origin Resource Sharing (CORS) usage. * Model access controls should enforce record ownership rather than allowing users to create, read, update, or delete any record. * Unique application business limit requirements should be enforced by domain models. * Disable web server directory listing and ensure file metadata (e.g., .git) and backup files are not present within web... [1]\n2. # A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"} ## Description. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification or destruction of all data, or performing a business function outside the user's limits. Common access control vulnerabilities include: [2]\n3. # A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"} ## How to prevent. Access control is only effective when implemented in trusted server-side code or serverless APIs, where the attacker cannot modify the access control check or metadata. [3]\n\nИсточники:\n[1] A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}, раздел: ## How to prevent. (owasp_top10), chunk_id=734, score=0.722\n[2] A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}, раздел: ## Description. (owasp_top10), chunk_id=730, score=0.719\n[3] A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}, раздел: ## How to prevent. (owasp_top10), chunk_id=733, score=0.699",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 734,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## How to prevent.",
+          "score": 0.72223,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 730,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## Description.",
+          "score": 0.7192295,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 733,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## How to prevent.",
+          "score": 0.6994054,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 736,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## How to prevent.",
+          "score": 0.6705458,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 731,
+          "document_id": 3,
+          "title": "A01:2025 Broken Access Control ![icon](../assets/TOP_10_Icons_Final_Broken_Access_Control.png){: style=\"height:80px;width:80px\" align=\"right\"}",
+          "source_type": "owasp_top10",
+          "section_title": "## Description.",
+          "score": 0.66849256,
+          "local_path": "data/raw/owasp/broken_access_control.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q026",
+      "question": "What are the main goals of ransomware risk management?",
+      "language": "en",
+      "tags": [
+        "nist",
+        "ransomware",
+        "risk-management"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 119,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "ransomware risk management",
+        "detect suspicious activity early",
+        "protect backups"
+      ],
+      "expected_source_keywords": [
+        "ransomware risk management",
+        "detect suspicious activity early",
+        "protect backups"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Ransomware Risk Management Summary ## Main goals The main goals of ransomware risk management are: - reduce the likelihood of ransomware infection; - limit the impact of successful attacks; - detect suspicious activity early; - prevent lateral movement; - protect backups; - restore business operations safely; - learn from incidents and improve controls. [1]\n2. # Ransomware Risk Management Summary ## Overview Ransomware is a type of attack where threat actors encrypt, steal, or otherwise disrupt access to an organization's data and systems. The attacker may demand payment in exchange for decryption, non-disclosure of stolen data, or restoration of operations. Ransomware risk management focuses on preparation, prevention, detection, response, recovery, and organizational resilience. [2]\n3. # Ransomware Risk Management Summary ## Response During response, the organization should: - isolate affected systems; - preserve evidence; - identify the initial access vector; - determine the scope of compromise; - protect backup systems; - disable compromised accounts; - block indicators of compromise; - communicate with stakeholders; - avoid restoring systems before containment is complete. [3]\n\nИсточники:\n[1] Ransomware Risk Management Summary, раздел: ## Main goals (nist), chunk_id=10, score=0.897\n[2] Ransomware Risk Management Summary, раздел: ## Overview (nist), chunk_id=9, score=0.826\n[3] Ransomware Risk Management Summary, раздел: ## Response (nist), chunk_id=14, score=0.783",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 10,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Main goals",
+          "score": 0.89668727,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 9,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Overview",
+          "score": 0.826274,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 14,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Response",
+          "score": 0.78323317,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 12,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Prevention",
+          "score": 0.76622134,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Первичные действия",
+          "score": 0.7564545,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q027",
+      "question": "How should an organization prepare for ransomware risk?",
+      "language": "en",
+      "tags": [
+        "nist",
+        "preparation"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "first_relevant_rank": 2,
+      "keyword_recall": 1.0,
+      "latency_ms": 83,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "incident response plan",
+        "testing backup restoration",
+        "critical assets"
+      ],
+      "expected_source_keywords": [
+        "incident response plan",
+        "testing backup restoration",
+        "critical assets"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Ransomware Risk Management Summary ## Response During response, the organization should: - isolate affected systems; - preserve evidence; - identify the initial access vector; - determine the scope of compromise; - protect backup systems; - disable compromised accounts; - block indicators of compromise; - communicate with stakeholders; - avoid restoring systems before containment is complete. [1]\n2. # Ransomware Risk Management Summary ## Preparation Organizations should prepare by: - maintaining an incident response plan; - defining roles and responsibilities; - keeping contact lists up to date; - testing backup restoration; - documenting critical assets; - identifying business-critical services; - training employees to recognize phishing; - preparing communication procedures. [2]\n3. # Runbook: Первичное реагирование на ransomware-инцидент ## Первичные действия При подтверждённом или вероятном ransomware нужно: 1. Изолировать заражённые хосты от сети. 2. Не выключать систему без необходимости. 3. Зафиксировать время обнаружения. 4. Сохранить ransom note и примеры зашифрованных файлов. 5. Проверить, есть ли признаки распространения на другие хосты. 6. Уведомить IR-команду и ответственных лиц. 7. Ограничить доступ к общим сетевым папкам. 8. Проверить состояние резервных копий. 9. Заблокировать известные индикаторы компрометации. 10. Начать сбор артефактов. [3]\n\nИсточники:\n[1] Ransomware Risk Management Summary, раздел: ## Response (nist), chunk_id=14, score=0.828\n[2] Ransomware Risk Management Summary, раздел: ## Preparation (nist), chunk_id=11, score=0.823\n[3] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Первичные действия (runbook), chunk_id=40, score=0.762",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 14,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Response",
+          "score": 0.82814175,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 11,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Preparation",
+          "score": 0.82279843,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Первичные действия",
+          "score": 0.7617543,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 9,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Overview",
+          "score": 0.7597646,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 10,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Main goals",
+          "score": 0.75396776,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q028",
+      "question": "What preventive controls help reduce ransomware risk?",
+      "language": "en",
+      "tags": [
+        "nist",
+        "prevention"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 100,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "multi-factor authentication",
+        "segmenting networks",
+        "patching"
+      ],
+      "expected_source_keywords": [
+        "multi-factor authentication",
+        "segmenting networks",
+        "patching"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Ransomware Risk Management Summary ## Prevention Preventive controls may include: - patching operating systems and applications; - using multi-factor authentication; - limiting administrative privileges; - segmenting networks; - filtering malicious email attachments; - blocking known malicious domains; - hardening remote access services; - disabling unnecessary services; - monitoring privileged accounts. [1]\n2. # Ransomware Risk Management Summary ## Main goals The main goals of ransomware risk management are: - reduce the likelihood of ransomware infection; - limit the impact of successful attacks; - detect suspicious activity early; - prevent lateral movement; - protect backups; - restore business operations safely; - learn from incidents and improve controls. [2]\n3. # Runbook: Первичное реагирование на ransomware-инцидент ## Рекомендуемые меры containment В зависимости от ситуации можно: - изолировать хосты через EDR; - отключить сетевые порты; - временно заблокировать SMB-доступ; - отключить скомпрометированные учётные записи; - сбросить пароли привилегированных пользователей; - заблокировать IOC на firewall, proxy, DNS и EDR; - остановить распространение через сетевые шары. [3]\n\nИсточники:\n[1] Ransomware Risk Management Summary, раздел: ## Prevention (nist), chunk_id=12, score=0.866\n[2] Ransomware Risk Management Summary, раздел: ## Main goals (nist), chunk_id=10, score=0.751\n[3] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Рекомендуемые меры containment (runbook), chunk_id=45, score=0.741",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 12,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Prevention",
+          "score": 0.8663244,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 10,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Main goals",
+          "score": 0.7512868,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 45,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Рекомендуемые меры containment",
+          "score": 0.7414435,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Первичные действия",
+          "score": 0.7311499,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 14,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Response",
+          "score": 0.71339107,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q029",
+      "question": "What should detection focus on for ransomware?",
+      "language": "en",
+      "tags": [
+        "nist",
+        "detection"
+      ],
+      "hit": true,
+      "reciprocal_rank": 0.5,
+      "first_relevant_rank": 2,
+      "keyword_recall": 1.0,
+      "latency_ms": 67,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "suspicious PowerShell",
+        "mass file modification",
+        "shadow copies"
+      ],
+      "expected_source_keywords": [
+        "suspicious PowerShell",
+        "mass file modification",
+        "shadow copies"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Runbook: Первичное реагирование на ransomware-инцидент ## Первичные действия При подтверждённом или вероятном ransomware нужно: 1. Изолировать заражённые хосты от сети. 2. Не выключать систему без необходимости. 3. Зафиксировать время обнаружения. 4. Сохранить ransom note и примеры зашифрованных файлов. 5. Проверить, есть ли признаки распространения на другие хосты. 6. Уведомить IR-команду и ответственных лиц. 7. Ограничить доступ к общим сетевым папкам. 8. Проверить состояние резервных копий. 9. Заблокировать известные индикаторы компрометации. 10. Начать сбор артефактов. [1]\n2. # Ransomware Risk Management Summary ## Detection Detection should focus on early signs of compromise, such as: - suspicious PowerShell activity; - unusual authentication patterns; - mass file modification; - unexpected encryption behavior; - deletion of shadow copies; - abnormal SMB traffic; - unusual access to backup systems; - EDR alerts related to credential theft or lateral movement. [2]\n3. # Ransomware Risk Management Summary ## Overview Ransomware is a type of attack where threat actors encrypt, steal, or otherwise disrupt access to an organization's data and systems. The attacker may demand payment in exchange for decryption, non-disclosure of stolen data, or restoration of operations. Ransomware risk management focuses on preparation, prevention, detection, response, recovery, and organizational resilience. [3]\n\nИсточники:\n[1] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Первичные действия (runbook), chunk_id=40, score=0.793\n[2] Ransomware Risk Management Summary, раздел: ## Detection (nist), chunk_id=13, score=0.772\n[3] Ransomware Risk Management Summary, раздел: ## Overview (nist), chunk_id=9, score=0.754",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Первичные действия",
+          "score": 0.7934551,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 13,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Detection",
+          "score": 0.7718713,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 9,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Overview",
+          "score": 0.754297,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 37,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Назначение",
+          "score": 0.7330872,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 44,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Защита резервных копий",
+          "score": 0.729669,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        }
+      ]
+    },
+    {
+      "question_id": "q030",
+      "question": "What backup strategy is resilient against ransomware?",
+      "language": "en",
+      "tags": [
+        "nist",
+        "backup"
+      ],
+      "hit": true,
+      "reciprocal_rank": 1.0,
+      "first_relevant_rank": 1,
+      "keyword_recall": 1.0,
+      "latency_ms": 76,
+      "answer_has_sources": true,
+      "no_answer": false,
+      "matched_keywords": [
+        "offline or immutable backups",
+        "restoration testing",
+        "backup repositories"
+      ],
+      "expected_source_keywords": [
+        "offline or immutable backups",
+        "restoration testing",
+        "backup repositories"
+      ],
+      "answer": "На основе найденных источников система нашла следующие сведения:\n1. # Ransomware Risk Management Summary ## Backup strategy A resilient backup strategy should include: - offline or immutable backups; - regular restoration testing; - separation of backup credentials; - monitoring access to backup repositories; - retention policies; - protection against deletion or encryption; - documentation of recovery time objectives. [1]\n2. # Runbook: Первичное реагирование на ransomware-инцидент ## Защита резервных копий Необходимо: - проверить доступность резервных копий; - изолировать backup-хранилище от заражённой сети; - проверить, не были ли удалены или зашифрованы backup-файлы; - не начинать восстановление до завершения containment; - проверить резервные копии на наличие вредоносных файлов. [2]\n3. # Ransomware Risk Management Summary ## Recovery Recovery activities may include: - rebuilding affected systems; - restoring data from clean backups; - validating that malware is removed; - rotating credentials; - increasing monitoring after restoration; - confirming business services are working; - documenting lessons learned; - updating response playbooks. [3]\n\nИсточники:\n[1] Ransomware Risk Management Summary, раздел: ## Backup strategy (nist), chunk_id=16, score=0.889\n[2] Runbook: Первичное реагирование на ransomware-инцидент, раздел: ## Защита резервных копий (runbook), chunk_id=44, score=0.760\n[3] Ransomware Risk Management Summary, раздел: ## Recovery (nist), chunk_id=15, score=0.743",
+      "top_results": [
+        {
+          "rank": 1,
+          "chunk_id": 16,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Backup strategy",
+          "score": 0.88875985,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 2,
+          "chunk_id": 44,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Защита резервных копий",
+          "score": 0.76034796,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        },
+        {
+          "rank": 3,
+          "chunk_id": 15,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Recovery",
+          "score": 0.74292374,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 4,
+          "chunk_id": 14,
+          "document_id": 2,
+          "title": "Ransomware Risk Management Summary",
+          "source_type": "nist",
+          "section_title": "## Response",
+          "score": 0.70284426,
+          "local_path": "data/raw/nist/ransomware_risk_management_summary.md"
+        },
+        {
+          "rank": 5,
+          "chunk_id": 40,
+          "document_id": 5,
+          "title": "Runbook: Первичное реагирование на ransomware-инцидент",
+          "source_type": "runbook",
+          "section_title": "## Первичные действия",
+          "score": 0.6995106,
+          "local_path": "data/raw/synthetic_runbooks/ransomware_initial_response_ru.md"
+        }
+      ]
+    }
+  ]
+}
